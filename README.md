@@ -12,7 +12,7 @@ This is a personal presentation site. Any fixes or requests are welcome to be fi
 
 ### Installation
 
-Warning: outdated!
+Warning: outdated! dev-stage scss->css processing and minification is now broken (removed broken bulp) and is done manually with vscode plugins.
 
 1. Clone this repo
 2. Run `npm i` in its root folder _eg. C:\\jandu\\_
