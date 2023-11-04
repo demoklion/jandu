@@ -16,9 +16,8 @@ Warning: outdated!
 
 1. Clone this repo
 2. Run `npm i` in its root folder _eg. C:\\jandu\\_
-3. `gulp dev` should start a live server with auto-updating website, opened in your default browser.
 
-If not: check if you have updated **npm**, if **gulp**'s tasks work and then check the browser's **console** for errors. Upstream issues have some hints too.
+If not: check if you have updated **npm** and then check the browser's **console** for errors. Upstream issues have some hints too.
 
 ### Usage
 
@@ -26,7 +25,7 @@ You could use this as your own portfolio site too, it's easy! Just change some c
 
 ### Dev setup
 
-_TL;DR: `git clone https://github.com/demoklion/jandu.git && cd jandu/ && npm i && gulp dev`_.
+_TL;DR: `git clone https://github.com/demoklion/jandu.git && cd jandu/ && npm i`_.
 
 This runs on GitHub Pages and is built by TravisCI, which activates with every commit to the master branch. It was forked from a free template based on Bootstrap 4 and modified using VS Code. It will forever be a WIP with irregular upgrades & changes. To setup the dev environment, you just need to download and install [Git](https://git-scm.com/download/win), [VS Code](https://code.visualstudio.com/) and [Node.JS](https://nodejs.org/en/), then follow instructions in Installation section.
 
