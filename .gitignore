@@ -5,3 +5,5 @@ bower_components
 jandu.code-workspace
 scss/grayscale.css
 scss/grayscale.css.map
+scss/variables.css
+scss/variables.css.map

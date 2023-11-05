@@ -51,10 +51,20 @@
   <meta property="og:url"
         content="https://jandu.top">
   <meta property="og:image"
-        content="https://jandu.top/img/og-image.jpg"><!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css"
-        rel="stylesheet"><!-- Custom styles for this template -->
-  <link href="css/grayscale.min.css"
+        content="https://jandu.top/img/og-image.jpg">
+
+
+
+
+  <!-- Bootstrap core CSS -->
+
+
+  <link rel="stylesheet"
+        href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+
+  <!-- Custom styles for this template -->
+  <link href="scss/grayscale.min.css"
         rel="stylesheet">
 </head>
 
@@ -77,7 +87,7 @@
   <!-- Navigation -->
   <nav id="mainNav"
        class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="navbar-brand">
         <a class="js-scroll-trigger text-uppercase font-weight-bold"
@@ -90,39 +100,37 @@
         </span>
       </div>
 
-      <button class="navbar-toggler navbar-toggler-right"
+      <button class="navbar-toggler"
               type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false">
-        Menu ≡
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        Menu
+        <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="navbarResponsive"
-           class="collapse navbar-collapse">
-        <div class="navbar-nav ml-auto">
-
-          <div class="nav-item nav-item-r">
-            <a class="nav-link js-scroll-trigger"
+      <div class="collapse navbar-collapse"
+           id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
+          <li class="nav-item">
+            <a class="nav-link"
                href="#contact">Contact</a>
-          </div>
-
-          <div class="nav-item nav-item-r">
-            <a class="nav-link js-scroll-trigger"
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
                href="#about">Profile</a>
-          </div>
-
-          <div class="nav-item nav-item-r">
-            <a class="nav-link js-scroll-trigger"
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
                href="#work">Work</a>
-          </div>
-        </div>
-
+          </li>
+        </ul>
       </div>
-      <!--  /.collapse  -->
+
     </div>
-    <!--  /.container -->
+    <!--  /.container-fluid -->
   </nav>
   <section id="contact"
            class="text-center content-offset-nav">
@@ -318,15 +326,12 @@
 
   </script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script defer
-          src="vendor/jquery/jquery.min.js"></script>
-  <script defer
-          src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script defer
-          src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Optional: Popper.js (if needed for certain Bootstrap components) -->
+  <!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+ -->
 
   <!-- Custom scripts for this template -->
   <script defer
