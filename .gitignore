@@ -1,3 +1,7 @@
 node_modules
 jandu.code-workspace
 .DS_Store
+scss/grayscale.css
+scss/grayscale.css.map
+scss/variables.css
+scss/variables.css.map
