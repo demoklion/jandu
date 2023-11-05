@@ -64,12 +64,11 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet"
-        href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
+  <link href="vendor/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="scss/grayscale.min.css"
+  <link href="css/grayscale.min.css"
         rel="stylesheet">
 
 </head>
@@ -84,10 +83,11 @@
 
 
 
+
   <!-- Navigation for project subpages-->
   <nav id="mainNav"
        class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="navbar-brand">
         <a class="js-scroll-trigger text-uppercase font-weight-bold"
@@ -103,13 +103,9 @@
       <a href="/index.html">
         ← Back
       </a>
-
     </div>
-    <!--  /.container-fluid -->
+    <!--  /.container -->
   </nav>
-
-
-
 
 
   <section class="text-center content-offset-nav">
@@ -368,7 +364,14 @@
   </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer
+          src="vendor/jquery/jquery.min.js"></script>
+  <script defer
+          src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script defer
+          src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script defer
