@@ -16,8 +16,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-             npm install -g cssmin@latest
-
 
       - name: Compile SCSS to CSS
         uses: gha-utilities/sass-build@v0.5.1
@@ -26,7 +24,10 @@ jobs:
           destination: scss/grayscale.css
 
       - name: Minify CSS
-        run: cssmin -o scss/grayscale.min.css scss/grayscale.css
+        uses: peaceiris/cssmin-action@v1
+        with:
+            css-file: scss/grayscale.css
+            output-file: scss/grayscale.min.css
 
       - name: Deploy compiled CSS to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
