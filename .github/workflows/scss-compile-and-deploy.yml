@@ -16,8 +16,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install -g npm@7.24.2
-             sudo apt-get update
-             sudo apt-get install cssmin
+             npm install -g cssmin@latest
+
 
       - name: Compile SCSS to CSS
         uses: gha-utilities/sass-build@v0.5.1
