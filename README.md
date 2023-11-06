@@ -12,7 +12,7 @@ This is a personal presentation site. Any fixes or requests are welcome to be fi
 
 ### Installation
 
-Warning: outdated! dev-stage scss->css processing and minification is now broken (removed broken bulp) and is done manually with vscode plugins.
+Warning: outdated! dev-stage processing and minification is now broken (because outdated gulp had to be removed) and is done manually with vscode plugins or omitted.
 
 1. Clone this repo
 2. Run `npm i` in its root folder _eg. C:\\jandu\\_
@@ -27,8 +27,8 @@ You could use this as your own portfolio site too, it's easy! Just change some c
 
 _TL;DR: `git clone https://github.com/demoklion/jandu.git && cd jandu/ && npm i`_.
 
-This runs on GitHub Pages and is built by TravisCI, which activates with every commit to the master branch. It was forked from a free template based on Bootstrap 4 and modified using VS Code. It will forever be a WIP with irregular upgrades & changes. To setup the dev environment, you just need to download and install [Git](https://git-scm.com/download/win), [VS Code](https://code.visualstudio.com/) and [Node.JS](https://nodejs.org/en/), then follow instructions in Installation section.
+This runs on GitHub Pages. It was forked from a free template based on Bootstrap 4 and modified using VS Code. It will forever be a WIP with irregular upgrades & changes. To setup the dev environment, you just need to download and install [Git](https://git-scm.com/download/win), [VS Code](https://code.visualstudio.com/) and [Node.JS](https://nodejs.org/en/), then follow instructions in Installation section.
 
 ## Copyright and License
 
-Copyright 2018 Ján Dugovič, based on a template adapted from Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+Copyright 2023 Ján Dugovič, based on a template adapted from Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.

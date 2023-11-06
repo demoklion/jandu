@@ -2,7 +2,6 @@
     CONTENTS
 \*------------------------------------*/
 /*
-IMPORTS
 RESETS
 NAVBAR
 SECTIONS
@@ -10,16 +9,14 @@ BUTTONS
 FOOTER
 SHARED
 */
-/*------------------------------------*\
-    $IMPORTS
-\*------------------------------------*/
+
 /*------------------------------------*\
     $RESETS
 \*------------------------------------*/
 body {
   background-color: #131516;
   color: #f2f3f4;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 500;
   height: 100%;
@@ -59,12 +56,12 @@ p {
 }
 
 a {
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #c0ffee;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   text-decoration: none;
   color: #5affd2;
 }
@@ -91,7 +88,6 @@ a:focus, a:hover {
 }
 
 #mainNav .navbar-nav .nav-item {
-  -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
 
@@ -101,7 +97,8 @@ a:focus, a:hover {
   background-color: transparent;
 }
 
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+#mainNav .navbar-nav .nav-item:active,
+#mainNav .navbar-nav .nav-item:focus {
   outline: none;
   background-color: transparent;
 }
@@ -110,25 +107,24 @@ a:focus, a:hover {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
     transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
     letter-spacing: 1px;
     border-bottom: none;
     background: transparent;
   }
+
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(242, 243, 244, 0.3);
     background: #131516;
   }
+
   #mainNav .nav-link.active {
     outline: none;
     background-color: rgba(242, 243, 244, 0.3);
   }
+
   #mainNav .nav-link.active:hover {
     color: #f2f3f4;
   }
@@ -137,70 +133,66 @@ a:focus, a:hover {
 /*------------------------------------*\
     $SECTIONS
 \*------------------------------------*/
-section#work {
+.subhead {
+  font-size: 1.5rem;
+}
+
+#work {
   background-color: #131516;
   color: #f2f3f4;
   display: grid;
   grid-row-gap: 1rem;
-  grid: 5rem 1fr 1fr 1fr / 90%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  grid: 5rem 1fr 1fr 1fr/90%;
   justify-content: center;
   padding: 6rem 0;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  section#work {
-    -ms-flex-line-pack: center;
+  #work {
     align-content: center;
-    grid: 10% 50% / 1fr 1fr 1fr;
+    grid: 10% 50%/1fr 1fr 1fr;
     grid-column-gap: 2rem;
     height: 100%;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 0 1rem;
     width: 100%;
   }
-  section#work .span-col-3 {
-    grid-column: span 3 / auto;
+
+  #work .span-col-3 {
+    grid-column: span 3/auto;
   }
-  section#work .intro-body .brand-heading {
+
+  #work .intro-body .brand-heading {
     font-size: 6rem;
   }
-  section#work .intro-body .intro-text {
+
+  #work .intro-body .intro-text {
     font-size: 1.5rem;
   }
 }
 
-section#work .intro-body {
-  -ms-flex-item-align: center;
+#work .intro-body {
   align-self: center;
   justify-self: center;
 }
 
-section#work .intro-body .brand-heading {
+#work .intro-body .brand-heading {
   font-size: 3rem;
 }
 
-section#work .intro-body .intro-text {
+#work .intro-body .intro-text {
   font-size: 1rem;
 }
 
-#about,
-#contact {
+.content-offset-nav {
   padding-top: 10rem;
 }
 
 @media (min-width: 992px) {
-  #about,
-  #contact {
+  .content-offset-nav {
     padding-top: 16rem;
   }
-}
-
-.subhead {
-  font-size: 1.5rem;
 }
 
 /*------------------------------------*\
@@ -209,7 +201,6 @@ section#work .intro-body .intro-text {
 .btn {
   white-space: normal;
   font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 0;
 }
@@ -220,7 +211,8 @@ section#work .intro-body .intro-text {
   background-color: transparent;
 }
 
-.btn-default:focus, .btn-default:hover {
+.btn-default:focus,
+.btn-default:hover {
   color: #131516;
   border: 1px solid #c0ffee;
   outline: none;
@@ -260,24 +252,7 @@ footer p {
 /*------------------------------------*\
     $SHARED
 \*------------------------------------*/
-/*
-::selection {
-  background: $secondary;
-  color: #fff;
-  text-shadow: none;
-} */
-/*
-img::-moz-selection {
-  background: transparent;
-}
 
-img::selection {
-  background: transparent;
-}
-
-img::-moz-selection {
-  background: transparent;
-} */
 .small-caps {
   font-variant: small-caps;
 }
@@ -300,21 +275,8 @@ img::-moz-selection {
   border: #c0ffee;
 }
 
-.iframe-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  margin-bottom: 2rem;
-  border: none;
+.emoji {
+  font-size: 5rem;
 }
 
-.iframe-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+/*# sourceMappingURL=grayscale.css.map */
