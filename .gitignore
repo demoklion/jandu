@@ -1,7 +1,3 @@
 node_modules
-.sass-cache
-bower_components
 jandu.code-workspace
 .DS_Store
-scss/grayscale.css
-scss/grayscale.css.map
