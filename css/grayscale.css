@@ -81,6 +81,11 @@ a:hover {
   padding: 1rem;
   color: #f2f3f4;
   border: 1px solid #f2f3f4;
+  font-size: 1rem;
+  padding: 1rem;
+  color: #f2f3f4;
+  border: 1px solid #f2f3f4;
+
 }
 
 #mainNav a {
@@ -278,5 +283,7 @@ footer p {
 .emoji {
   font-size: 5rem;
 }
+
+/*# sourceMappingURL=grayscale.css.map */
 
 /*# sourceMappingURL=grayscale.css.map */
