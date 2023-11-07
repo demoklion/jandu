@@ -53,15 +53,7 @@
   <meta property="og:image"
         content="https://jandu.top/img/og-image.jpg">
 
-
-
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css"
-        rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/grayscale.min.css"
+  <link href="css/styles.min.css"
         rel="stylesheet">
 </head>
 
@@ -76,12 +68,13 @@
     <div class="container">
 
       <div class="navbar-brand">
-        <a class="js-scroll-trigger text-uppercase font-weight-bold"
-           href="#page-top">
+        <a class="text-uppercase fw-bold"
+           href="#page-top"
+           data-scroll-to="#page-top">
           JánDugovič
         </a>
 
-        <span class="pl-3 font-weight-light small text-light d-none d-md-inline">
+        <span class="ps-3 fw-light small text-light d-none d-md-inline">
           Product Designer's Portfolio
         </span>
       </div>
@@ -97,19 +90,28 @@
       </button>
 
       <div id="navbarResponsive"
-           class="collapse navbar-collapse">
+           class="collapse navbar-collapse justify-content-end">
         <div class="navbar-nav ml-auto">
           <div class="nav-item nav-item-r">
-            <a class="nav-link js-scroll-trigger"
-               href="#contact">Contact</a>
+            <a class="nav-link"
+               href="#contact"
+               data-scroll-to="#contact">
+              Contact
+            </a>
           </div>
           <div class="nav-item nav-item-r">
-            <a class="nav-link js-scroll-trigger"
-               href="#about">Profile</a>
+            <a class="nav-link"
+               href="#about"
+               data-scroll-to="#about">
+              Profile
+            </a>
           </div>
           <div class="nav-item nav-item-r">
-            <a class="nav-link js-scroll-trigger"
-               href="#work">Work</a>
+            <a class="nav-link"
+               href="#work"
+               data-scroll-to="#work">
+              Work
+            </a>
           </div>
         </div>
 
@@ -122,17 +124,18 @@
 
 
   <section id="contact"
-           class="text-center content-offset-nav">
+           class="text-center content-offset-nav"
+           data-bs-spy="scroll">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h2>Let's talk design</h2>
-          <p class="text-left">
+          <p class="text-start">
             I'm always looking to expand my experience in design. Message me, or ask me in person. You
             can meet me at various digital design related events around Prague.
           </p>
 
-          <p class="text-left">
+          <p class="text-start">
             Currently I'm working (remotely) at <a href="https://www.kb.cz/">a huge bank</a>, building a design systems team. Every autumn I also <a href="https://insis.vse.cz/katalog/syllabus.pl?predmet=160948;zpet=%2Fkatalog%2Findex.pl%3Fobdobi%3D301%2Cjak%3Ddle_jmena;jazyk=3;lang=cz">teach a course</a> at University of Economics in Prague. When time allows, I help pro–bono at <a href="https://cesko.digital/">Česko.Digital</a> and various other NGOs.&emsp;Wanna talk about that? Let's grab a coffee!
           </p>
 
@@ -183,14 +186,20 @@
       </div>
     </div>
   </section>
+
+
+
+
+
   <section id="about"
-           class="text-center content-offset-nav">
+           class="text-center content-offset-nav"
+           data-bs-spy="scroll">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>About Ján Dugovič</h2>
 
-          <div class="subhead text-left">
+          <div class="subhead text-start">
             <p>
               JD is a Product Designer, based in Prague, focused on shaping meaningful experiences through design. Specializing in Design Systems in recent years, he empowers product teams to deliver sophisticated and consistent mobile and web apps, ensuring a native-like user experience.
             </p>
@@ -263,7 +272,13 @@
       </div>
     </div>
   </section>
-  <section id="work">
+
+
+
+
+
+  <section id="work"
+           data-bs-spy="scroll">
     <h1 class="span-col-3">Work</h1>
     <!-- TO DO: add kb+ -->
 
@@ -294,6 +309,11 @@
       <span class="emoji">🗃️</span>
     </a>
   </section>
+
+
+
+
+
   <footer>
     <div class="container text-center">
       <p>
@@ -330,10 +350,17 @@
   </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+          defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-easing@1.4.1/dist/jquery.easing.min.js"></script>
 
   <!-- Core theme JS -->
-  <script src="dist/js/scripts.js"></script>
+  <script src="dist/js/scripts.js"
+          defer></script>
 
   <script defer>
 
