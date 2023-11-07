@@ -3,15 +3,12 @@
   "name": "startbootstrap-grayscale",
   "version": "4.1.1",
   "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
-    },
+    "build": "npm run clean && npm run build:scripts",
+    "build:scripts": "node scripts/build-scripts.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
   "description": "A grayscale one page HTML theme for Bootstrap.",
   "keywords": [
     "css",
@@ -36,21 +33,23 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   },
   "dependencies": {
-    "jquery": "3.7.1",
     "bootstrap": "^4.6.2",
+    "gulp-htmlmin": "^5.0.1",
+    "jquery": "3.7.1",
     "jquery.easing": "^1.4.1",
-    "popper.js": "^1.16.1",
-            "clipboard": "^2.0.11",
-        "font-awesome": "4.7.0",
-        "gulp-htmlmin": "^5.0.1"
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-standard": "^4.1.0"
+    "eslint-plugin-standard": "^4.1.0",
+    "prettier": "^3.0.3",
+    "shelljs": "^0.8.5",
+    "upath": "^2.0.1"
   }
 }
