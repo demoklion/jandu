@@ -26,7 +26,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   },
   "dependencies": {
-    "jquery": "3.6.0",
+    "jquery": "3.7.1",
     "bootstrap": "^4.6.2",
     "jquery.easing": "^1.4.1"
   }
