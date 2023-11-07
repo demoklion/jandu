@@ -33,7 +33,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   },
   "dependencies": {
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.3.2",
     "gulp-htmlmin": "^5.0.1",
     "jquery": "3.7.1",
     "jquery.easing": "^1.4.1",
