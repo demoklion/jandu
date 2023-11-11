@@ -2,13 +2,6 @@
   "title": "Grayscale",
   "name": "startbootstrap-grayscale",
   "version": "4.1.1",
-  "scripts": {
-    "build": "npm run clean && npm run build:scripts",
-    "build:scripts": "node scripts/build-scripts.js",
-    "clean": "node scripts/clean.js",
-    "start": "npm run build && node scripts/start.js",
-    "start:debug": "npm run build && node scripts/start-debug.js"
-  },
   "description": "A grayscale one page HTML theme for Bootstrap.",
   "keywords": [
     "css",
