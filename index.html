@@ -337,20 +337,25 @@
   <!--  Deferred images script,
         this bit does it:
         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="original.png"> -->
-  <script defer>
-    function init() { for (var t = document.getElementsByTagName("img"), e = 0; e < t.length; e++)t[e].getAttribute("data-src") && t[e].setAttribute("src", t[e].getAttribute("data-src")) } window.onload = init;
+  <script type="text/javascript"
+          defer>
+            console.log("deferred images js");
 
-  </script>
+            function init() { for (var t = document.getElementsByTagName("img"), e = 0; e < t.length; e++)t[e].getAttribute("data-src") && t[e].setAttribute("src", t[e].getAttribute("data-src")) } window.onload = init;
+
+          </script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          type="text/javascript"
           defer></script>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+          type="text/javascript"
           defer></script>
 
   <!-- Core theme JS -->
-  <script>
+  <script type="text/javascript">
     console.log("running theme js");
     /*!
     * Start Bootstrap - Grayscale v4.1.1 (https://startbootstrap.com/template-overviews/grayscale)
@@ -409,26 +414,28 @@
 
   </script>
 
-  <script defer>
+  <script type="text/javascript"
+          defer>
+            console.log("running offline page service worker js");
 
-    // This is the "Offline page" service worker
-    // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-    // Check compatibility for the browser we're running this in
-    if ("serviceWorker" in navigator) {
-      if (navigator.serviceWorker.controller) {
-        console.log("[PWA Builder] active service worker found, no need to register");
-      } else {
-        // Register the service worker
-        navigator.serviceWorker
-          .register("pwabuilder-sw.js", {
-            scope: "./"
-          })
-          .then(function (reg) {
-            console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-          });
-      }
-    }
-  </script>
+            // This is the "Offline page" service worker
+            // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+            // Check compatibility for the browser we're running this in
+            if ("serviceWorker" in navigator) {
+              if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+              } else {
+                // Register the service worker
+                navigator.serviceWorker
+                  .register("pwabuilder-sw.js", {
+                    scope: "./"
+                  })
+                  .then(function (reg) {
+                    console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                  });
+              }
+            }
+          </script>
 
 </body>
 
