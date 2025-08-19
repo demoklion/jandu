@@ -63,6 +63,6 @@ Identify specific components for web component conversion:
 
 **Date Completed**: 2025-08-19  
 **Final Commit**: 0cf5fab  
-**Pull Request**: https://github.com/StartBootstrap/startbootstrap-grayscale/pull/237
+**Pull Request**: https://github.com/demoklion/jandu/pull/227
 
 **Achievement**: 30-year technical longevity with brutally clean design preserved.

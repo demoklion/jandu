@@ -20,7 +20,9 @@
       "WebFetch(domain:help.figma.com)",
       "mcp__figma-dev-mode-mcp-server__get_code",
       "mcp__figma-dev-mode-mcp-server__get_image",
-      "Bash(open http://localhost:8000)"
+      "Bash(open http://localhost:8000)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr close:*)"
     ],
     "deny": [],
     "ask": [],
