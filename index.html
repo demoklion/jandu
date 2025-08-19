@@ -145,40 +145,7 @@
 
           <ul class="list-inline banner-social-buttons">
             <li class="list-inline-item">
-              <button id="copyButton"
-                      class="btn btn-default btn-lg"
-                      data-clipboard-text="dugovicjan@gmail.com"
-                      title="Copy email to clipboard"
-                      aria-describedby="tip1">
-                📧 dugovicjan@gmail.com
-              </button>
-
-              <!-- copies email address to clipboard -->
-              <script>
-                document.getElementById("copyButton").addEventListener("click", async function () {
-                  const textToCopy = "dugovicjan@gmail.com";
-                  
-                  try {
-                    // Modern clipboard API (requires HTTPS)
-                    if (navigator.clipboard && window.isSecureContext) {
-                      await navigator.clipboard.writeText(textToCopy);
-                      alert("Email address copied to clipboard: " + textToCopy);
-                    } else {
-                      // Fallback for older browsers or non-HTTPS
-                      const tempTextArea = document.createElement("textarea");
-                      tempTextArea.value = textToCopy;
-                      document.body.appendChild(tempTextArea);
-                      tempTextArea.select();
-                      document.execCommand("copy");
-                      document.body.removeChild(tempTextArea);
-                      alert("Email address copied to clipboard: " + textToCopy);
-                    }
-                  } catch (error) {
-                    console.error("Failed to copy to clipboard:", error);
-                    alert("Unable to copy email. Please manually copy: " + textToCopy);
-                  }
-                });
-              </script>
+              <email-clipboard email="dugovicjan@gmail.com"></email-clipboard>
             </li>
 
             <li class="list-inline-item">
@@ -273,12 +240,14 @@
 
           <!-- how to pics: go to https://console.cloudinary.com/pm/c-4ac4b25b356e57d9b130b6969f1e33/media-explorer?sortBy=-createdAt, upload, open, get url, paste here, add params -->
           <div class="row mt-5">
-            <figure class="col-12 col-md-4 col-lg-3 p-2"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                   data-src="https://res.cloudinary.com/jandu-top/image/upload/q_auto,f_auto,dpr_auto/v1526113257/myphoto1.jpg"
-                   class="img-fluid"
-                   loading="lazy"
-                   alt="at work">
-            </figure>
+            <image-fullscreen>
+              <figure class="col-12 col-md-4 col-lg-3 p-2"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                     data-src="https://res.cloudinary.com/jandu-top/image/upload/q_auto,f_auto,dpr_auto/v1526113257/myphoto1.jpg"
+                     class="img-fluid"
+                     loading="lazy"
+                     alt="at work">
+              </figure>
+            </image-fullscreen>
 
             <figure class="col-12 col-md-4 col-lg-3 p-2">
               <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
@@ -362,7 +331,7 @@
   <footer>
     <div class="container text-center">
       <p>
-        © Ján Dugovič <span id="current-year">2024</span>
+        © Ján Dugovič <current-year></current-year>
         <a href="https://github.com/demoklion/jandu"
            class="pl-5"
            target="_blank">
@@ -396,14 +365,8 @@
           crossorigin="anonymous"
           type="text/javascript"
           defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('current-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
+  <script src="js/components.js" defer></script>
+
 
 
   <!-- Core theme JS -->
@@ -421,7 +384,7 @@
     window.addEventListener('DOMContentLoaded', event => {
 
       // Navbar shrink function
-      var navbarShrink = function () {
+      const navbarShrink = () => {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
           return;
@@ -431,7 +394,6 @@
         } else {
           navbarCollapsible.classList.add('navbar-shrink')
         }
-
       };
 
       // Shrink the navbar
@@ -454,7 +416,7 @@
       const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
       );
-      responsiveNavItems.map(function (responsiveNavItem) {
+      responsiveNavItems.map((responsiveNavItem) => {
         responsiveNavItem.addEventListener('click', () => {
           if (window.getComputedStyle(navbarToggler).display !== 'none') {
             navbarToggler.click();
@@ -466,28 +428,6 @@
 
   </script>
 
-  <script type="text/javascript"
-          defer>
-            console.log("running offline page service worker js");
-
-            // This is the "Offline page" service worker
-            // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-            // Check compatibility for the browser we're running this in
-            if ("serviceWorker" in navigator) {
-              if (navigator.serviceWorker.controller) {
-                console.log("[PWA Builder] active service worker found, no need to register");
-              } else {
-                // Register the service worker
-                navigator.serviceWorker
-                  .register("pwabuilder-sw.js", {
-                    scope: "./"
-                  })
-                  .then(function (reg) {
-                    console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-                  });
-              }
-            }
-          </script>
 
 </body>
 

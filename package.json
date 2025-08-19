@@ -26,8 +26,8 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   },
   "dependencies": {
-    "bootstrap": "^5",
-    "popper.js": "^1.16.1"
+    "bootstrap": "5.2.3"
+
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
