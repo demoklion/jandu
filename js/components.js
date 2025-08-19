@@ -1,20 +1,35 @@
-// Web Components for Portfolio
-// Modern, standards-based components for long-term stability
+/**
+ * @fileoverview Web Components for Portfolio
+ * Modern, standards-based components for long-term stability
+ */
 
-// Current Year Web Component
+/**
+ * Current Year Web Component - Automatically displays current year
+ * @extends HTMLElement
+ */
 class CurrentYear extends HTMLElement {
+  /**
+   * Called when element is added to DOM
+   */
   connectedCallback() {
     this.textContent = new Date().getFullYear();
   }
 }
 
-// Email Clipboard Web Component
+/**
+ * Email Clipboard Web Component - Copies email to clipboard with modern API and fallback
+ * @extends HTMLElement
+ */
 class EmailClipboard extends HTMLElement {
   constructor() {
     super();
+    /** @type {string} Email address to copy */
     this.email = this.getAttribute('email') || 'dugovicjan@gmail.com';
   }
 
+  /**
+   * Called when element is added to DOM
+   */
   connectedCallback() {
     this.innerHTML = `
       <button type="button" class="btn btn-default btn-lg" id="copyButton" title="Copy address to clipboard">
@@ -25,6 +40,10 @@ class EmailClipboard extends HTMLElement {
     this.querySelector('#copyButton').addEventListener('click', () => this.copyEmail());
   }
 
+  /**
+   * Copy email to clipboard using modern API or fallback
+   * @returns {Promise<void>}
+   */
   async copyEmail() {
     try {
       // Modern Clipboard API (preferred)
@@ -41,6 +60,9 @@ class EmailClipboard extends HTMLElement {
     }
   }
 
+  /**
+   * Fallback copy method for older browsers
+   */
   fallbackCopy() {
     const tempTextArea = document.createElement('textarea');
     tempTextArea.value = this.email;
@@ -60,15 +82,26 @@ class EmailClipboard extends HTMLElement {
     }
   }
 
+  /**
+   * Show success message to user
+   */
   showSuccess() {
     alert('E–mail address copied to clipboard: ' + this.email);
   }
 }
 
-// Image Fullscreen - Simple JavaScript function
+/**
+ * Image Fullscreen functionality - Click images to view fullscreen
+ */
 function initImageFullscreen() {
+  /** @type {HTMLElement|null} Current overlay element */
   let overlay = null;
 
+  /**
+   * Transform Cloudinary URL for fullscreen viewing
+   * @param {string} originalUrl - Original image URL
+   * @returns {string} Fullscreen-optimized URL
+   */
   function getFullscreenUrl(originalUrl) {
     if (originalUrl.includes('res.cloudinary.com/jandu-top/image/upload/')) {
       return originalUrl.replace(
@@ -79,6 +112,10 @@ function initImageFullscreen() {
     return originalUrl;
   }
 
+  /**
+   * Open image in fullscreen overlay
+   * @param {HTMLImageElement} img - Image element to display
+   */
   function openFullscreen(img) {
     const imageSrc = img.getAttribute('data-src') || img.src;
     const fullscreenSrc = getFullscreenUrl(imageSrc);
@@ -114,6 +151,9 @@ function initImageFullscreen() {
     document.addEventListener('keydown', handleKeydown);
   }
 
+  /**
+   * Close fullscreen overlay
+   */
   function closeFullscreen() {
     if (overlay) {
       document.body.removeChild(overlay);
@@ -122,6 +162,10 @@ function initImageFullscreen() {
     }
   }
 
+  /**
+   * Handle keyboard events in fullscreen
+   * @param {KeyboardEvent} e - Keyboard event
+   */
   function handleKeydown(e) {
     if (e.key === 'Escape') {
       closeFullscreen();
@@ -142,7 +186,9 @@ function initImageFullscreen() {
 customElements.define('current-year', CurrentYear);
 customElements.define('email-clipboard', EmailClipboard);
 
-// Deferred Styles Loader
+/**
+ * Load deferred styles from template element
+ */
 function loadDeferredStyles() {
   const deferredStyles = document.getElementById('deferred-styles');
   if (!deferredStyles) return;
@@ -153,7 +199,9 @@ function loadDeferredStyles() {
   deferredStyles.parentElement.removeChild(deferredStyles);
 }
 
-// Image Lazy Loading
+/**
+ * Initialize lazy loading for images with data-src attribute
+ */
 function initImageLazyLoading() {
   const images = document.getElementsByTagName('img');
   for (let i = 0; i < images.length; i++) {
@@ -165,7 +213,8 @@ function initImageLazyLoading() {
   }
 }
 
-// Initialize deferred styles
+// Initialize deferred styles with requestAnimationFrame fallback
+/** @type {Function} */
 const raf = window.requestAnimationFrame || 
             window.mozRequestAnimationFrame || 
             window.webkitRequestAnimationFrame || 
@@ -177,7 +226,7 @@ if (raf) {
   window.addEventListener('load', loadDeferredStyles);
 }
 
-// Initialize on page load
+// Initialize lazy loading on page load
 window.addEventListener('load', initImageLazyLoading);
 
 // Initialize image fullscreen functionality
