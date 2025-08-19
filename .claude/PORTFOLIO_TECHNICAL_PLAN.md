@@ -16,34 +16,34 @@
 
 ### 1. Selective Web Components
 Identify specific components for web component conversion:
-- [ ] Email clipboard button (self-contained, reusable)
+- [x] Email clipboard button (self-contained, reusable) ✅ DONE: EmailClipboard component in js/components.js
 - [ ] Deferred iframe loader (clean encapsulation)
-- [ ] Year auto-updater (simple, isolated)
-- [ ] **NOT converting**: Navigation, layout, project cards (keep simple HTML)
+- [x] Year auto-updater (simple, isolated) ✅ DONE: CurrentYear component in js/components.js, used in all footers
+- [x] **NOT converting**: Navigation, layout, project cards (keep simple HTML) ✅ CONFIRMED
 
 ### 2. Dependency Minimization
-- [ ] Review all npm dependencies - remove unused
-- [ ] Replace jQuery with vanilla JS where simple
-- [ ] Keep Bootstrap 5 but audit for unused components
+- [x] Review all npm dependencies - remove unused ✅ DONE: jQuery removed (commit 7963649)
+- [x] Replace jQuery with vanilla JS where simple ✅ DONE: All jQuery usage eliminated
+- [x] Keep Bootstrap 5 but audit for unused components ✅ DONE: Bootstrap modernized (commit 0128600)
 - [ ] Evaluate service worker complexity vs. benefit
 
 ### 3. Modern JavaScript Patterns
-- [ ] Convert old function declarations to modern ES6+
-- [ ] Use const/let instead of var
-- [ ] Implement proper error handling
+- [ ] Convert old function declarations to modern ES6+ (PARTIALLY DONE - need to finish HTML files)
+- [ ] Use const/let instead of var (PARTIALLY DONE - need to finish HTML files)
+- [x] Implement proper error handling ✅ DONE: Added to components.js
 - [ ] Add type checking with JSDoc comments
 
 ### 4. Architecture Simplification
-- [ ] Consolidate similar script blocks
+- [x] Consolidate similar script blocks ✅ DONE: Created js/components.js
 - [ ] Improve CSS organization (keep minimal)
 - [ ] Clean up unused CSS rules
 - [ ] Standardize code formatting
 
 ### 5. Long-term Stability
-- [ ] Use only web standards (no proprietary APIs)
-- [ ] Document all custom components
+- [x] Use only web standards (no proprietary APIs) ✅ DONE: Web Components, vanilla JS
+- [x] Document all custom components ✅ DONE: .claude/*.md files created
 - [ ] Add version pinning for critical dependencies
-- [ ] Create maintenance documentation
+- [x] Create maintenance documentation ✅ DONE: CLAUDE.md, technical docs
 
 ## What NOT to Change
 - ❌ Visual design or layout

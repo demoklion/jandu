@@ -270,19 +270,11 @@
 
   <!--  SCRIPTS   -->
   <!-- Deferred Styles Script -->
-  <script defer>
-    var loadDeferredStyles = function () { var e = document.getElementById("deferred-styles"), n = document.createElement("div"); n.innerHTML = e.textContent, document.body.appendChild(n), e.parentElement.removeChild(e) }, raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame; raf ? raf(function () { window.setTimeout(loadDeferredStyles, 0) }) : window.addEventListener("load", loadDeferredStyles);
-
-  </script>
 
   <!--  Deferred images script,
         this bit does it:
         <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="original.png"> -->
 
-  <script defer>
-    function init() { for (var t = document.getElementsByTagName("img"), e = 0; e < t.length; e++)t[e].getAttribute("data-src") && t[e].setAttribute("src", t[e].getAttribute("data-src")) } window.onload = init;
-
-  </script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
