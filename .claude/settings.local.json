@@ -5,9 +5,27 @@
       "WebSearch",
       "Bash(git checkout:*)",
       "Bash(git add:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "WebFetch(domain:jandu.top)",
+      "WebFetch(domain:github.com)",
+      "Bash(grep:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(npm search:*)",
+      "Bash(nvm list:*)",
+      "Bash(brew list:*)",
+      "Bash(npm --version)",
+      "Bash(find:*)",
+      "Bash(lsof:*)",
+      "WebFetch(domain:www.figma.com)",
+      "WebFetch(domain:help.figma.com)",
+      "mcp__figma-dev-mode-mcp-server__get_code",
+      "mcp__figma-dev-mode-mcp-server__get_image"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "/Users/jandu",
+      "/Users/jandu/.config"
+    ]
   }
 }

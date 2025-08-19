@@ -54,3 +54,29 @@ This is Ján Dugovič's personal portfolio website - a static HTML site showcasi
 - Bootstrap ScrollSpy for navigation highlighting
 - Deferred image loading for performance
 - Progressive Web App manifest and icons
+
+## MCP Configuration
+
+The following MCP servers are configured for this project:
+
+### Figma Dev Mode MCP
+```json
+"Figma Dev Mode MCP": {
+    "type": "http",
+    "url": "http://127.0.0.1:3845/mcp"
+}
+```
+- **Status**: Working correctly
+- **Port**: 3845 (served by Figma Desktop app)
+- **Requirements**: Figma Desktop app must be running with Dev Mode enabled
+- **Authentication**: Handled automatically by Figma Desktop app
+
+### Browser MCP
+```json
+"browser": {
+    "command": "/Users/jandu/.nvm/versions/node/v22.18.0/bin/npx",
+    "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+}
+```
+- **Node version**: v22.18.0 (managed via nvm)
+- **Package**: @modelcontextprotocol/server-puppeteer
