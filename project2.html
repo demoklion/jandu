@@ -252,7 +252,7 @@
   <footer>
     <div class="container text-center">
       <p>
-        © Ján Dugovič <span id="current-year">2024</span>
+        © Ján Dugovič <current-year></current-year>
         <a href="https://github.com/demoklion/jandu"
            class="pl-5"
            target="_blank">
@@ -289,14 +289,7 @@
           integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
           crossorigin="anonymous"
           defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('current-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
+  <script src="js/components.js" defer></script>
 
 
   <script defer>

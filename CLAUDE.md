@@ -80,3 +80,4 @@ The following MCP servers are configured for this project:
 ```
 - **Node version**: v22.18.0 (managed via nvm)
 - **Package**: @modelcontextprotocol/server-puppeteer
+- save info about cloudinary for this project

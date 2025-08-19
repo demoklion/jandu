@@ -177,6 +177,15 @@
             </li>
 
             <li class="list-inline-item">
+              <a href="https://wa.me/420777663976"
+                 target="_blank"
+                 class="btn btn-default btn-lg"
+                 title="Message me on WhatsApp">
+                📱 WhatsApp
+              </a>
+            </li>
+
+            <li class="list-inline-item">
               <a href="https://m.me/jandugovic"
                  target="_blank"
                  class="btn btn-default btn-lg"
@@ -251,12 +260,14 @@
 
           <!-- how to pics: go to https://console.cloudinary.com/pm/c-4ac4b25b356e57d9b130b6969f1e33/media-explorer?sortBy=-createdAt, upload, open, get url, paste here, add params -->
           <div class="row mt-5">
-            <figure class="col-12 col-md-4 col-lg-3 p-2"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                   data-src="https://res.cloudinary.com/jandu-top/image/upload/q_auto,f_auto,dpr_auto/v1526113257/myphoto1.jpg"
-                   class="img-fluid"
-                   loading="lazy"
-                   alt="at work">
-            </figure>
+            <image-fullscreen>
+              <figure class="col-12 col-md-4 col-lg-3 p-2"><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                     data-src="https://res.cloudinary.com/jandu-top/image/upload/q_auto,f_auto,dpr_auto/v1526113257/myphoto1.jpg"
+                     class="img-fluid"
+                     loading="lazy"
+                     alt="at work">
+              </figure>
+            </image-fullscreen>
 
             <figure class="col-12 col-md-4 col-lg-3 p-2">
               <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
@@ -340,7 +351,7 @@
   <footer>
     <div class="container text-center">
       <p>
-        © Ján Dugovič <span id="current-year">2024</span>
+        © Ján Dugovič <current-year></current-year>
         <a href="https://github.com/demoklion/jandu"
            class="pl-5"
            target="_blank">
@@ -374,14 +385,7 @@
           crossorigin="anonymous"
           type="text/javascript"
           defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('current-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
+  <script src="js/components.js" defer></script>
 
 
   <!-- Core theme JS -->
