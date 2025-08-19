@@ -53,6 +53,10 @@
   <meta property="og:image"
         content="https://jandu.top/img/og-image.jpg">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous">
   <link href="css/styles.min.css"
         rel="stylesheet">
 </head>
@@ -198,8 +202,7 @@
     <p class="text-left">In Czech, sorry.
       <a href="https://youtu.be/1SnB9SWtibU?si=SmMCvkD2Q5qSRiKT">Hear me talk on YouTube</a>
     </p>
-    <div class="iframe-wrapper"><!-- Defers iframe load -->
-      <script>$(document).ready(function () { $("iframe#figmaTalk").attr("src", "iframe_url") })</script>
+    <div class="iframe-wrapper">
       <iframe id="figmaTalk"
               style="border: 1px solid rgba(0, 0, 0, 0.1);"
               width="800"
@@ -337,7 +340,7 @@
   <footer>
     <div class="container text-center">
       <p>
-        © Ján Dugovič 2024
+        © Ján Dugovič <span id="current-year">2024</span>
         <a href="https://github.com/demoklion/jandu"
            class="pl-5"
            target="_blank">
@@ -366,15 +369,20 @@
           </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
           crossorigin="anonymous"
           type="text/javascript"
           defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
-          type="text/javascript"
-          defer></script>
 
   <!-- Core theme JS -->
   <script type="text/javascript">

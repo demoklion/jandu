@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type"
         content="text/html; charset=utf-8">
   <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+        content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="description"
         content="Hey! I'm a product designer working in fintech. Let's go for a coffe maybe?">
   <meta name="google-site-verification"
@@ -58,6 +58,10 @@
   <meta property="og:image"
         content="https://jandu.top/img/og-image.jpg">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous">
   <link href="css/styles.min.css"
         rel="stylesheet">
 
@@ -248,7 +252,7 @@
   <footer>
     <div class="container text-center">
       <p>
-        © Ján Dugovič 2023
+        © Ján Dugovič <span id="current-year">2024</span>
         <a href="https://github.com/demoklion/jandu"
            class="pl-5"
            target="_blank">
@@ -281,23 +285,19 @@
   </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script defer
-          src="vendor/jquery/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
           crossorigin="anonymous"
           defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 
-  <!-- Plugin JavaScript -->
-  <script defer
-          src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script defer
-          src="js/grayscale.min.js"></script>
-
-  <!-- Core theme JS -->
-  <script src="dist/js/scripts.js"></script>
 
   <script defer>
 
