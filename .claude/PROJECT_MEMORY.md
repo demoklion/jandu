@@ -141,8 +141,9 @@ Ján Dugovič's personal portfolio website - technical modernization for 30-year
 1. Always create new branch for each task
 2. Check remote frequently: `git fetch origin`
 3. Push early and often with meaningful commits
-4. Create PRs liberally for review
-5. Rebase on master regularly to stay current
+4. **Create PRs on correct repo**: Always use `--repo demoklion/jandu`
+5. Create PRs liberally for review
+6. Rebase on master regularly to stay current
 
 ## 🛠️ Development Environment
 

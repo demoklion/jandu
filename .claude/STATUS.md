@@ -1,7 +1,7 @@
 # Portfolio Development Status
-**Last Updated**: 2025-08-20 05:45 UTC  
+**Last Updated**: 2025-08-20 05:50 UTC  
 **Current Branch**: `docs/reorganize-memory-files`  
-**Active Phase**: Documentation Reorganization
+**Active Phase**: Documentation Reorganization → Verification Phase
 
 ## 🎯 Current Sprint
 
@@ -51,6 +51,7 @@
 - **Remote Status**: Master updated with security fixes (commit 6c52e22)
 - **Branch Status**: Current branch needs rebase on master
 - **PR Strategy**: Small, frequent PRs for easy review
+- **⚠️ IMPORTANT**: Always use `--repo demoklion/jandu` for PR creation
 
 ## 🐛 Known Issues
 
