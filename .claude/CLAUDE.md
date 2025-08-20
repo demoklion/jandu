@@ -88,6 +88,17 @@ The following MCP servers are configured for this project:
 - **Node version**: v22.18.0 (managed via nvm)
 - **Package**: @modelcontextprotocol/server-puppeteer
 
+### Playwright Visual Testing MCP
+```json
+"playwright": {
+    "command": "/Users/jandu/.nvm/versions/node/v22.18.0/bin/npx",
+    "args": ["@playwright/mcp@latest"]
+}
+```
+- **Package**: @playwright/mcp@latest  
+- **Purpose**: Visual regression testing for CSS migration
+- **Version**: 0.0.34
+
 ## Current Development Phase
 
 **Focus**: CSS Bundle Reduction - eliminating Bootstrap dependency and creating custom <20KB CSS bundle while preserving the brutally clean design.
