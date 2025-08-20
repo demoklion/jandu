@@ -12921,6 +12921,27 @@ a:hover {
 \*------------------------------------*/
 .subhead {
   font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4 {
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Better spacing for text blocks */
+.text-start p + p {
+  margin-top: 1.5rem;
 }
 
 #work {
@@ -12972,12 +12993,12 @@ a:hover {
 }
 
 .content-offset-nav {
-  padding-top: 10rem;
+  padding-top: 6rem;
 }
 
 @media (min-width: 992px) {
   .content-offset-nav {
-    padding-top: 16rem;
+    padding-top: 10rem;
   }
 }
 

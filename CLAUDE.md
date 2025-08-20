@@ -28,13 +28,13 @@ This is Ján Dugovič's personal portfolio website - a static HTML site showcasi
 2. Navigate to directory: `cd jandu/`
 3. Install dependencies: `npm i`
 
-**Important**: The build process using Gulp is currently broken due to outdated dependencies. CSS minification and processing is done manually using VS Code plugins.
+**CSS Build Process**: Uses `clean-css-cli` for minification. Run `npm run minify-css` to update `styles.min.css` after editing `styles.css`. The old Gulp build system has been replaced with this modern, lightweight solution.
 
 ## Development Notes
 
 - The site is deployed via GitHub Pages
-- No npm scripts are currently functional - the package.json reflects an outdated Gulp-based build system
-- Manual development workflow using VS Code for styling and minification
+- **CSS Workflow**: Edit `css/styles.css` → Run `npm run minify-css` → Commit both files
+- Modern npm scripts replace the old broken Gulp-based build system
 - Bootstrap dependencies are managed via npm but loaded from CDN in production
 - Images are lazy-loaded and served via Cloudinary CDN
 - Email clipboard functionality implemented with vanilla JavaScript

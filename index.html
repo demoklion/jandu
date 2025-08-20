@@ -132,7 +132,7 @@
            data-bs-spy="scroll">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
+        <div class="col-lg-10 mx-auto h-card">
           <h2>Let's talk design</h2>
           <p class="text-start">
             I'm always looking to expand my experience in design. Message me, or ask me in person. You
@@ -150,7 +150,7 @@
 
             <li class="list-inline-item">
               <a href="tel:+420777663976"
-                 class="btn btn-default btn-lg"
+                 class="btn btn-default btn-lg p-tel"
                  title="Call me maybe?">
                 🤙 (+420)777 663 976
               </a>
@@ -209,12 +209,12 @@
            data-bs-spy="scroll">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>About Ján Dugovič</h2>
+        <div class="col-lg-8 mx-auto h-card">
+          <h2 class="p-name">About Ján Dugovič</h2>
 
           <div class="subhead text-start">
             <p>
-              JD is a Product Designer, based in Prague, focused on shaping meaningful experiences through design. Specializing in Design Systems in recent years, he empowers product teams to deliver sophisticated and consistent mobile and web apps, ensuring a native-like user experience.
+              <span class="p-nickname">JD</span> is a <span class="p-job-title">Product Designer</span>, based in <span class="p-locality">Prague</span>, focused on shaping meaningful experiences through design. Specializing in Design Systems in recent years, he empowers product teams to deliver sophisticated and consistent mobile and web apps, ensuring a native-like user experience.
             </p>
           </div>
           <ul class="list-inline banner-social-buttons">
@@ -228,7 +228,7 @@
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/dugi/"
                  target="_blank"
-                 class="btn btn-default btn-lg">
+                 class="btn btn-default btn-lg u-url">
                 👨‍💼 LinkedIn
               </a>
             </li>
@@ -401,12 +401,15 @@
       // Shrink the navbar when page is scrolled
       document.addEventListener('scroll', navbarShrink);
 
-      // Activate Bootstrap scrollspy on the main nav element
+      // Activate Bootstrap scrollspy on the main nav element with responsive offset
       const mainNav = document.body.querySelector('#mainNav');
       if (mainNav) {
+        const isDesktop = window.matchMedia('(min-width: 992px)').matches;
+        const offset = isDesktop ? '10rem' : '6rem';
+        
         new bootstrap.ScrollSpy(document.body, {
           target: '#mainNav',
-          padding: '10rem 0',
+          rootMargin: `-${offset} 0px -90% 0px`,
         });
       };
 

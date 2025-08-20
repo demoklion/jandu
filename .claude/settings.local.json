@@ -22,7 +22,11 @@
       "mcp__figma-dev-mode-mcp-server__get_image",
       "Bash(open http://localhost:8000)",
       "Bash(gh pr list:*)",
-      "Bash(gh pr close:*)"
+      "Bash(gh pr close:*)",
+      "Bash(gh issue:*)",
+      "Bash(open http://localhost:8001)",
+      "Bash(cat:*)",
+      "Bash(npm run minify-css:*)"
     ],
     "deny": [],
     "ask": [],

@@ -66,3 +66,68 @@ Identify specific components for web component conversion:
 **Pull Request**: https://github.com/demoklion/jandu/pull/227
 
 **Achievement**: 30-year technical longevity with brutally clean design preserved.
+
+---
+
+## PHASE 2: ISSUE RESOLUTION
+
+**Date Started**: 2025-08-19  
+**Approach**: Review each open issue for relevance post-modernization, then tackle systematically
+
+### Open Issues Analysis
+
+**Recent Issues:**
+- [ ] #209: Implement simple analytics without cookies (enhancement, good first issue)
+- [ ] #208: Fix scrollspy (bug)
+
+**Historical Issues:**
+- [ ] #63: Add h-card tags/card (enhancement) 
+- [ ] #53: Improve hyphenation
+- [ ] #40: Different phone click action on phones
+- [ ] #36: Fix top margin on mobile (bug)
+- [ ] #35: Replace bootstrap with an actual grid (enhancement)
+- [ ] #29: Add what I learned on each project (enhancement)
+
+### Issue Relevance Check Status
+- [x] Review each issue against current codebase ✅ DONE: All 8 issues analyzed
+- [x] Identify which issues may have been resolved by modernization ✅ DONE: None resolved, all still relevant
+- [x] Plan work priority and approach ✅ DONE: Priority order established
+- [x] Execute fixes systematically ✅ IN PROGRESS: Major issues resolved
+
+### Issue Analysis Results
+
+**✅ RESOLVED ISSUES:**
+- [x] **#208: Fix scrollspy** ✅ FIXED: Responsive ScrollSpy with proper offset matching content-offset-nav padding
+- [x] **#36: Fix top margin on mobile** ✅ FIXED: Reduced content-offset-nav padding from 10rem→6rem mobile, 16rem→10rem desktop  
+- [x] **#63: Add h-card microformats** ✅ IMPLEMENTED: Semantic contact markup in #contact and #about sections
+- [x] **#53: Improve hyphenation** ✅ ENHANCED: Typography improvements - line-height, spacing, font-weight (no negative letter-spacing)
+
+**⏳ PENDING ISSUES:**
+- [ ] **#35: Replace bootstrap with CSS grid** - Strategy planned: Migrate #work section grid (already using CSS Grid) as template
+- [ ] **#209: Simple analytics without cookies** - Privacy-focused analytics implementation pending
+- [ ] **#40: Different phone click action** - Investigation of current phone behavior needed
+- [ ] **#29: Add project learnings** - Content task for user to handle personally
+
+### Build System Modernization
+- [x] **CSS Workflow** ✅ MODERNIZED: Replaced broken Gulp with clean-css-cli
+  - `npm run minify-css` - Build minified CSS from source
+  - `npm run build` - Full build process
+  - `npm run serve` - Local development server
+- [x] **Documentation** ✅ UPDATED: CLAUDE.md reflects new build process
+
+### 🔒 Security Fixes (2025-08-20)
+- [x] **DOM XSS Vulnerabilities** ✅ FIXED: All 3 critical vulnerabilities resolved
+  - `fullImg.src` assignment now validates URLs with `isValidImageUrl()`
+  - `innerHTML` injection replaced with safe `createElement` + `textContent`
+  - `img.setAttribute('src')` now validates data-src URLs before setting
+- [x] **URL Validation** ✅ IMPLEMENTED: Comprehensive `isValidImageUrl()` function
+  - Blocks `javascript:` and `data:` schemes
+  - Validates URL structure and protocol (http/https only)
+  - Proper error logging for blocked URLs
+
+### Remaining Work Priority
+1. **UX Improvements** - Replace alert() with modern feedback patterns
+2. **CSS Grid migration** - Modernize layout architecture 
+3. **Privacy-focused analytics** - Simple tracking without cookies
+4. **Phone click behavior** - Investigate and enhance mobile UX
+5. **Content updates** - Project learnings (user task)
