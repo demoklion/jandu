@@ -66,3 +66,35 @@ Identify specific components for web component conversion:
 **Pull Request**: https://github.com/demoklion/jandu/pull/227
 
 **Achievement**: 30-year technical longevity with brutally clean design preserved.
+
+## CSS BUNDLE REDUCTION PHASE (CURRENT)
+
+**Started**: 2025-08-20  
+**Branch**: css/bootstrap-replacement  
+**Goal**: Replace 150KB+ Bootstrap with <20KB custom CSS
+
+### Phase A: Bootstrap Audit (COMPLETE ✅)
+- [x] Complete Bootstrap usage inventory
+- [x] Map grid system patterns
+- [x] Document component usage
+- [x] Create replacement strategy
+
+### Phase B: Custom CSS Implementation (IN PROGRESS)
+- [x] Create 12KB custom CSS bundle with Bootstrap equivalents
+- [x] Implement CSS Grid system replacement
+- [x] Build custom button and navigation systems
+- [x] Add mobile navigation toggle JavaScript
+- [x] Configure Playwright MCP for visual regression testing
+
+### Visual Regression Testing Workflow (CURRENT)
+**Strategy**: Incremental changes with visual validation
+1. Create baseline screenshots on master branch (Bootstrap)
+2. Make small CSS replacements on feature branch
+3. Use Playwright MCP to compare visuals before each commit
+4. Only proceed if visual regression tests pass
+
+**Current Status**: Ready to create baseline visual tests
+
+### Recent Updates
+- **2025-08-20**: Added tests/ directory to .gitignore (commit 46b3eab)
+- **Visual Testing Setup**: Configured for 0.5% threshold (not 20% - too high for pixel-perfect testing)
