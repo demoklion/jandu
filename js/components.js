@@ -4,6 +4,34 @@
  */
 
 /**
+ * Security utility functions
+ */
+
+/**
+ * Validate URL for safe image loading
+ * @param {string} url - URL to validate
+ * @returns {boolean} True if URL is safe for image loading
+ */
+function isValidImageUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  
+  try {
+    const urlObj = new URL(url, window.location.origin);
+    // Only allow http/https protocols
+    if (urlObj.protocol !== 'http:' && urlObj.protocol !== 'https:') {
+      return false;
+    }
+    // Block javascript: and data: schemes
+    if (url.toLowerCase().startsWith('javascript:') || url.toLowerCase().startsWith('data:')) {
+      return false;
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Current Year Web Component - Automatically displays current year
  * @extends HTMLElement
  */
@@ -136,7 +164,13 @@ function initImageFullscreen() {
     `;
 
     const fullImg = document.createElement('img');
-    fullImg.src = fullscreenSrc;
+    // Security: Validate URL before assignment
+    if (isValidImageUrl(fullscreenSrc)) {
+      fullImg.src = fullscreenSrc;
+    } else {
+      console.error('Invalid image URL blocked:', fullscreenSrc);
+      return; // Exit if URL is invalid
+    }
     fullImg.alt = img.alt;
     fullImg.style.cssText = `
       max-width: 90vw;
@@ -193,10 +227,11 @@ function loadDeferredStyles() {
   const deferredStyles = document.getElementById('deferred-styles');
   if (!deferredStyles) return;
   
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = deferredStyles.textContent;
-  document.body.appendChild(tempDiv);
-  deferredStyles.parentElement.removeChild(deferredStyles);
+  // Security: Use createElement and textContent instead of innerHTML
+  const styleElement = document.createElement('style');
+  styleElement.textContent = deferredStyles.textContent;
+  document.head.appendChild(styleElement);
+  deferredStyles.remove();
 }
 
 /**
@@ -207,8 +242,11 @@ function initImageLazyLoading() {
   for (let i = 0; i < images.length; i++) {
     const img = images[i];
     const dataSrc = img.getAttribute('data-src');
-    if (dataSrc) {
+    // Security: Validate URL before setting src
+    if (dataSrc && isValidImageUrl(dataSrc)) {
       img.setAttribute('src', dataSrc);
+    } else if (dataSrc) {
+      console.warn('Invalid data-src URL blocked:', dataSrc);
     }
   }
 }
