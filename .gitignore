@@ -1,2 +1,5 @@
 node_modules
 .DS_Store
+
+# Visual regression testing
+tests/
