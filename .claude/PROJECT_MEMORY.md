@@ -76,19 +76,31 @@ Ján Dugovič's personal portfolio website - technical modernization for 30-year
 - Navigation: Fixed navbar with responsive collapse on main page only
 - **Target Size Reduction**: 150KB+ Bootstrap → <20KB custom CSS (~130KB savings)
 
-#### Phase B: Custom CSS Implementation  
-- [ ] Replace Bootstrap grid with CSS Grid/Flexbox
-- [ ] Create custom button system
-- [ ] Build responsive navigation without Bootstrap nav
-- [ ] Implement typography system
-- [ ] Create utility classes for spacing/alignment
+#### Phase B: Custom CSS Implementation (IN PROGRESS)
+- [x] Replace Bootstrap grid with CSS Grid/Flexbox
+- [x] Create custom button system
+- [x] Build responsive navigation without Bootstrap nav
+- [x] Implement typography system
+- [x] Create utility classes for spacing/alignment
+- [x] Add mobile navigation toggle JavaScript
+- [x] Configure Playwright MCP for visual regression testing
+- [x] Create 12KB custom CSS bundle (target: <20KB ✅)
 
-#### Phase C: Progressive Replacement
-- [ ] Update HTML files with custom classes
-- [ ] Test responsive behavior on all breakpoints
-- [ ] Ensure visual consistency maintained
+**Current Status**: Custom CSS implemented, visual regression testing setup complete
+
+#### Phase C: Progressive Replacement (READY TO BEGIN)
+- [ ] Update HTML files with custom classes (incremental approach)
+- [ ] Test responsive behavior on all breakpoints  
+- [ ] Ensure visual consistency maintained (< 1% difference)
 - [ ] Remove Bootstrap CDN dependency
 - [ ] Optimize and minify final CSS bundle
+
+### Visual Regression Testing Setup (COMPLETE ✅)
+**Tool**: Playwright MCP (@playwright/mcp@latest)  
+**Configuration**: 1% difference threshold, desktop + mobile viewports  
+**Coverage**: All 4 pages with baseline screenshots created  
+**Files**: VISUAL_REGRESSION_SETUP.md, AGENT_RECOMMENDATIONS.md  
+**Status**: Ready for incremental CSS migration with automated visual validation
 
 ### Expected Outcomes
 - **Bundle Size**: 150KB+ → <20KB total CSS

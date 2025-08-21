@@ -22,7 +22,10 @@
       "mcp__figma-dev-mode-mcp-server__get_image",
       "Bash(open http://localhost:8000)",
       "Bash(gh pr list:*)",
-      "Bash(gh pr close:*)"
+      "Bash(gh pr close:*)",
+      "Bash(npm run serve:*)",
+      "Bash(npx playwright test:*)",
+      "Bash(npm run test:*)"
     ],
     "deny": [],
     "ask": [],
