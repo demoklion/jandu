@@ -1,0 +1,114 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "JánDugovič" [ref=e5] [cursor=pointer]:
+        - /url: "#page-top"
+      - link "← Back" [ref=e6] [cursor=pointer]:
+        - /url: /index.html
+  - generic [ref=e8]:
+    - heading "Work" [level=1] [ref=e9]
+    - heading "Old enterprise sw got bloated, so we redesigned it" [level=2] [ref=e11]:
+      - text: Old enterprise
+      - generic [ref=e12]: sw
+      - text: got bloated, so we redesigned it
+    - generic [ref=e13]:
+      - heading "Problem 1/4" [level=3] [ref=e14]:
+        - text: Problem
+        - generic [ref=e15]: 1/4
+      - paragraph [ref=e16]:
+        - text: How can we redesign
+        - generic [ref=e17]: heo
+        - text: for managers, so they are incentived to lead their companies more effectively?
+        - generic [ref=e19]: "&"
+        - text: How can we redesign
+        - generic [ref=e20]: heo
+        - text: for operators to perform their daily routines more effectively?
+      - generic [ref=e21]:
+        - heading "Process of redesigning one of the interface elements" [level=4] [ref=e22]
+        - generic [ref=e23]:
+          - figure "Original" [ref=e24]:
+            - img "Original" [ref=e25] [cursor=pointer]
+            - generic [ref=e26]: Original
+          - figure "Sketch" [ref=e27]:
+            - img "Sketch" [ref=e28] [cursor=pointer]
+            - generic [ref=e29]: Sketch
+          - figure "Low–fidelity" [ref=e30]:
+            - img "Low-fidelity" [ref=e31] [cursor=pointer]
+            - generic [ref=e32]: Low–fidelity
+          - figure "Mid–fidelity" [ref=e33]:
+            - img "Mid-fidelity" [ref=e34] [cursor=pointer]
+            - generic [ref=e35]: Mid–fidelity
+          - figure "High–fidelity" [ref=e36]:
+            - img "High-fidelity" [ref=e37] [cursor=pointer]
+            - generic [ref=e38]: High–fidelity
+    - generic [ref=e39]:
+      - heading "Barriers 2/4" [level=3] [ref=e40]:
+        - text: Barriers
+        - generic [ref=e41]: 2/4
+      - paragraph [ref=e42]:
+        - text: The
+        - generic [ref=e43]: goal
+        - text: of this project was to redesign an
+        - generic [ref=e44]: erp
+        - text: software package to make it attractive to potential customers, while making it easy to use for current users. While the application is robust and reliable, its interface has become bloated and hard to use over the years.
+        - text: Another challenge was that on this redesign a much bigger design change, in the corporation itself, was to be evaluated. So the project team had to take into account the whole portfolio, which consisted of a bunch of different software suites.
+    - generic [ref=e45]:
+      - heading "Process 3/4" [level=3] [ref=e46]:
+        - text: Process
+        - generic [ref=e47]: 3/4
+      - list [ref=e48]:
+        - listitem [ref=e49]: Stakeholder Analysis
+        - listitem [ref=e50]: Business Model Canvas
+        - listitem [ref=e51]: Target Audience Identification
+        - listitem [ref=e52]: Partnership Model
+        - listitem [ref=e53]: Usability Field Studies
+        - listitem [ref=e54]: Usability Testing with 6 humans
+        - listitem [ref=e55]: Co–design workshops with corporate stakeholders
+        - listitem [ref=e56]: Heuristic Evaluation
+        - listitem [ref=e57]: Prototyping
+        - listitem [ref=e58]: Wireflows
+      - figure "Wireflow of the proposed screens for one of the prototypes" [ref=e59]:
+        - img "Wireflow of the proposed screens for one of the prototypes" [ref=e60] [cursor=pointer]
+        - generic [ref=e61]: Wireflow of the proposed screens for one of the prototypes
+    - generic [ref=e62]:
+      - heading "Result 4/4" [level=3] [ref=e63]:
+        - text: Result
+        - generic [ref=e64]: 4/4
+      - paragraph [ref=e65]:
+        - text: The obvious solution was (Microsoft Office's)
+        - generic [ref=e66]: the Ribbon
+        - text: . So at the agency we conducted research, designed prototypes and tested it all. We also added
+        - generic [ref=e67]: the Dashboard
+        - text: to provide an overview of the most important views each user needs.
+    - generic [ref=e68]:
+      - paragraph [ref=e69]:
+        - text: "Client:"
+        - link "cee leader in sme erps (confidential)" [ref=e71] [cursor=pointer]:
+          - /url: https://www.lbstudio.sk/about
+          - generic [ref=e72] [cursor=pointer]:
+            - generic [ref=e73] [cursor=pointer]: cee
+            - text: leader in
+            - generic [ref=e74] [cursor=pointer]: sme erp
+            - text: s
+            - generic [ref=e75] [cursor=pointer]: (confidential)
+      - paragraph [ref=e76]: "Location: CZ + SK"
+      - paragraph [ref=e77]:
+        - text: "Project length: 1 year"
+        - generic [ref=e78]: (participated 4 months)
+  - list [ref=e79]:
+    - listitem [ref=e80]:
+      - link "← Back Home" [ref=e81] [cursor=pointer]:
+        - /url: /index.html
+    - listitem [ref=e82]:
+      - link "→ Next Project" [ref=e83] [cursor=pointer]:
+        - /url: /project1.html
+  - contentinfo [ref=e84]:
+    - paragraph [ref=e86]:
+      - text: © Ján Dugovič
+      - generic [ref=e87]: "2025"
+      - link "Fork me on GitHub 🐙🐈" [ref=e88] [cursor=pointer]:
+        - /url: https://github.com/demoklion/jandu
+```

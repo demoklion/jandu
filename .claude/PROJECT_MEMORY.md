@@ -99,12 +99,33 @@ Ján Dugovič's personal portfolio website - technical modernization for 30-year
 
 **Current Status**: Custom CSS implemented, visual regression testing setup complete
 
-#### Phase C: Progressive Replacement (READY TO BEGIN)
-- [ ] Update HTML files with custom classes (incremental approach)
-- [ ] Test responsive behavior on all breakpoints  
-- [ ] Ensure visual consistency maintained (< 1% difference)
-- [ ] Remove Bootstrap CDN dependency
-- [ ] Optimize and minify final CSS bundle
+#### Phase C: Progressive Replacement (IN PROGRESS)
+**First Component: Typography Utilities** 
+**Strategy**: Start with safest, lowest-impact changes first
+
+**Planned Sequence**:
+1. **Typography Utilities** (READY TO BEGIN)
+   - Replace: `.text-*`, `.fw-*`, `.small` classes (39 instances total)
+   - Risk: LOW - Text styling has minimal layout impact
+   - Files affected: All 4 HTML files
+   - Expected visual impact: Minimal (font weights, colors, sizes)
+
+2. **Spacing Utilities** (NEXT)
+   - Replace: `.p-*`, `.m-*`, `.mx-auto` classes (40+ instances)
+   - Risk: MEDIUM - Spacing affects layout but predictable
+   - Impact: Padding/margin consistency
+
+3. **Button System** (AFTER SPACING)
+   - Replace: `.btn*` classes (9 instances)
+   - Risk: MEDIUM - Visual prominence but isolated components
+   - Impact: Contact buttons and project navigation
+
+4. **Navigation System** (COMPLEX)
+   - Replace: `.navbar*` classes (15+ instances)
+   - Risk: HIGH - Complex responsive behavior and JavaScript
+   - Impact: Site navigation functionality
+
+**Current Status**: Ready to begin with Typography Utilities replacement
 
 ### Visual Regression Testing Setup (COMPLETE ✅)
 **Tool**: Playwright MCP (@playwright/mcp@latest)  

@@ -1,0 +1,82 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "JánDugovič" [ref=e5] [cursor=pointer]:
+          - /url: "#page-top"
+        - generic [ref=e6]: Product Designer's Portfolio
+      - link "← Back" [ref=e7] [cursor=pointer]:
+        - /url: /index.html
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Work" [level=1] [ref=e12]
+      - heading "Golem Design System" [level=2] [ref=e13]
+      - paragraph [ref=e14]: State of the Art Design System for the New Era of Banking
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Target 1/3" [level=3] [ref=e17]:
+          - text: Target
+          - generic [ref=e18]: 1/3
+        - paragraph [ref=e19]: How can we develop a set of sustainable and adaptable components for a new daily banking app across iOS, Android, and Web platforms, considering that the final visual style is not yet determined?
+      - 'figure "Intro to Golem: a set of standard coding tools (front–end aka FE components) and design tools (Figma libraries)." [ref=e21]':
+        - img "Mockup of laptop screen showing intro to Golem Design System, text is illegible" [ref=e22] [cursor=pointer]
+        - generic [ref=e23]: "Intro to Golem: a set of standard coding tools (front–end aka FE components) and design tools (Figma libraries)."
+      - generic [ref=e24]:
+        - heading "My role 2/3" [level=3] [ref=e25]:
+          - text: My role
+          - generic [ref=e26]: 2/3
+        - heading "The gist of it" [level=4] [ref=e27]
+        - paragraph [ref=e28]: After multiple attempts by other experts, I spearheaded the organization-wide initiative that resulted in the successful first release. Throughout this process, we established standardized methods of operation and governance for design systems across the entire corporation.
+        - heading "More details" [level=5] [ref=e29]
+        - paragraph [ref=e30]: We initiated the process by examining existing design systems and libraries. Our initial findings included a component library designed for the previous banking system, created in Sketch and integrated with technical documentation in Confluence. Additionally, we were aware of an emerging library for the key aspects of web banking. As our research progressed, we uncovered smaller initiatives, such as those focused on internal applications or individuals experimenting with new tools to create libraries.
+        - paragraph [ref=e31]: "The introduction of new sales channels necessitated an entirely new backend, frontend, and design stack. Capitalizing on this opportunity, we began outlining the essential set of components: forms, buttons, straightforward illustrations, and templates. These served as valuable artifacts for discussions with developers, analysts, and the visual design aspects of the project."
+        - paragraph [ref=e32]: Subsequently, we generated initial mockups of uncomplicated workflows expected in the new channels, such as login, onboarding, and the selection of account numbers or card ordering. These fundamental screens, already identified as essential, became the basis for iterative refinement of the component setup, parameters, APIs, and implementations across all three supported platforms (iOS, Android, and Angular for web).
+        - paragraph [ref=e33]: Simultaneously, we established small design system teams to manage this new internal product. Leveraging existing developers and UI designers, we formalized roles for platform–specific design leaders and introduced UX designers specializing in design systems. Subsequently, we expanded the team by including copywriters and a dedicated manager overseeing the project.
+      - figure "One iteration of the DS Team, enjoying a conference" [ref=e35]:
+        - img "Four people holding up cushions, faces not visible, a sign read Real UX Camp" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - text: One iteration of the DS Team, enjoying
+          - link "a conference" [ref=e38] [cursor=pointer]:
+            - /url: https://realuxcamp.com/
+      - generic [ref=e39]:
+        - heading "Artifacts 3/3" [level=3] [ref=e40]:
+          - text: Artifacts
+          - generic [ref=e41]: 3/3
+        - list [ref=e42]:
+          - listitem [ref=e43]: Developed a library of 50 stable cross-platform interactive components in Figma. Each component showcases all interaction states and includes comprehensive documentation on the same Figma page. Utilizes the latest available Figma DS–management features.
+          - listitem [ref=e44]: Created extensive technical documentation. Housed in Confluence, it features numerous examples, real–life use cases, production code, and API and integration-related details.
+          - listitem [ref=e45]: Designed three showcase apps, each tailored for a specific platform, featuring interactive components. Visual regression testing is operational for one app, with plans underway for the remaining two.
+          - listitem [ref=e46]: Implemented governance processes, including integration workflows and the establishment of a council to guide contribution proposals.
+          - listitem [ref=e47]: Developed interactive Figma files for design onboarding, complementing existing resources for developers. These files seamlessly link to the developers' onboarding for a cohesive experience.
+      - generic [ref=e48]:
+        - figure "Developer's view of a component in Figma's Dev Mode" [ref=e49]:
+          - img "Mockup of laptop showin Figma dev mode UI with one example component" [ref=e50] [cursor=pointer]
+          - generic [ref=e51]: Developer's view of a component in Figma's Dev Mode
+        - figure "Designer's view of one super complicated pattern in Figma" [ref=e52]:
+          - img "Mockup of laptop showin Figma editor mode UI with one example pattern" [ref=e53] [cursor=pointer]
+          - generic [ref=e54]: Designer's view of one super complicated pattern in Figma
+    - generic [ref=e55]:
+      - paragraph [ref=e56]:
+        - text: "Client:"
+        - link "Komerční banka" [ref=e58] [cursor=pointer]:
+          - /url: https://www.kb.cz/cs/obcane
+          - generic [ref=e59] [cursor=pointer]: Komerční banka
+      - paragraph [ref=e60]: "Location: Prague"
+      - paragraph [ref=e61]: "Project length: 3 years"
+  - list [ref=e62]:
+    - listitem [ref=e63]:
+      - link "← Back Home" [ref=e64] [cursor=pointer]:
+        - /url: /index.html
+    - listitem [ref=e65]:
+      - link "→ Next Project" [ref=e66] [cursor=pointer]:
+        - /url: /project2.html
+  - contentinfo [ref=e67]:
+    - paragraph [ref=e69]:
+      - text: © Ján Dugovič
+      - generic [ref=e70]: "2025"
+      - link "Fork me on GitHub 🐙🐈" [ref=e71] [cursor=pointer]:
+        - /url: https://github.com/demoklion/jandu
+```

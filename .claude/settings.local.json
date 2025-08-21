@@ -25,7 +25,11 @@
       "Bash(gh pr close:*)",
       "Bash(npm run serve:*)",
       "Bash(npx playwright test:*)",
-      "Bash(npm run test:*)"
+      "Bash(npm run test:*)",
+      "Bash(npm run minify-css:*)",
+      "Bash(git restore:*)",
+      "Bash(npx cleancss-cli:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": [],

@@ -1,0 +1,76 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "JánDugovič" [ref=e5] [cursor=pointer]:
+          - /url: "#page-top"
+        - generic [ref=e6]: Product Designer's Portfolio
+      - link "← Back" [ref=e7] [cursor=pointer]:
+        - /url: /index.html
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Work" [level=1] [ref=e12]
+      - heading "Začni učit!" [level=2] [ref=e13]
+      - paragraph [ref=e14]: New website for NGO that tries to get more people to become teachers
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Target 1/3" [level=3] [ref=e17]:
+          - text: Target
+          - generic [ref=e18]: 1/3
+        - paragraph [ref=e19]: How can we help people—who already have a different career—to find a way to start teaching, given their very different education and experience, so that they know how and what they can legally teach?
+      - generic [ref=e20]:
+        - heading "My role 2/3" [level=3] [ref=e21]:
+          - text: My role
+          - generic [ref=e22]: 2/3
+        - heading "The gist of it" [level=4] [ref=e23]
+        - paragraph [ref=e24]:
+          - text: During the
+          - generic [ref=e25]: covid-19
+          - text: pandemic, I, along with numerous expert friends, joined forces to support the
+          - link "Česko.Digital" [ref=e26] [cursor=pointer]:
+            - /url: https://cesko.digital/
+          - generic [ref=e27]: NGO
+          - text: . I assumed the role of Product Design Leader for the project aimed at aspiring career changers transitioning to teaching, named Začni učit! (Czech for Start Teaching!, previously known as Výluka).
+        - heading "More details" [level=5] [ref=e28]
+        - paragraph [ref=e29]: During the intensive project setup, we strategically planned mixed methods research encompassing qualitative, quantitative, and domain expert insights. Following the initial research and design phase, I played a crucial role in supervising a small team of designers. Collaborating with other pro–bono contributors, we established efficient development workflows and streamlined communication between design, business, and development.
+        - paragraph [ref=e30]: Leading my compact design team, we continuously iterated on sections of the new web app. After each insight gained and synthesized from research, we collaboratively determined necessary changes and identified areas for further investigation. In later stages, we conducted both moderated and unmoderated usability testing of the solution. Simultaneously, we played a pivotal role in assisting the team with presenting and prioritizing upcoming developments for the web app.
+        - paragraph [ref=e31]: We facilitated the team's adoption of remote–first tools such as Miro and Figma, guiding them in planning and conducting segments of the research. All of us managed these responsibilities alongside our regular full–time jobs.
+      - figure "Part of team during one of the in–person workshops" [ref=e33]:
+        - img "Part of team during one of the in–person workshops" [ref=e34] [cursor=pointer]
+        - generic [ref=e35]: Part of team during one of the in–person workshops
+      - generic [ref=e36]:
+        - heading "Artifacts 3/3" [level=3] [ref=e37]:
+          - text: Artifacts
+          - generic [ref=e38]: 3/3
+        - list [ref=e39]:
+          - listitem [ref=e40]: Responsive hi–fi prototype of the whole web app
+          - listitem [ref=e41]: Library of custom reusable responsive components
+        - figure "Extensive hi-fi prototype of the web app in Figma" [ref=e42]:
+          - img "Several screens in Figma connected with interaction spaghetti, too small to read" [ref=e43] [cursor=pointer]
+          - generic [ref=e44]: Extensive hi-fi prototype of the web app in Figma
+    - generic [ref=e45]:
+      - paragraph [ref=e46]:
+        - text: "Client:"
+        - link "Začni učit!" [ref=e48] [cursor=pointer]:
+          - /url: https://zacniucit.cz/muzu-ucit/
+          - generic [ref=e49] [cursor=pointer]: Začni učit!
+      - paragraph [ref=e50]: "Location: Prague"
+      - paragraph [ref=e51]: "Project length: 3 years and ongoing"
+  - list [ref=e52]:
+    - listitem [ref=e53]:
+      - link "← Back Home" [ref=e54] [cursor=pointer]:
+        - /url: /index.html
+    - listitem [ref=e55]:
+      - link "→ Next Project" [ref=e56] [cursor=pointer]:
+        - /url: /project3.html
+  - contentinfo [ref=e57]:
+    - paragraph [ref=e59]:
+      - text: © Ján Dugovič
+      - generic [ref=e60]: "2025"
+      - link "Fork me on GitHub 🐙🐈" [ref=e61] [cursor=pointer]:
+        - /url: https://github.com/demoklion/jandu
+        - text: Fork me on GitHub 🐙🐈
+```

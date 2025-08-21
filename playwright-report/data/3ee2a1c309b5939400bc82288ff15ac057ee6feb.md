@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "JánDugovič" [ref=e5] [cursor=pointer]:
+        - /url: "#page-top"
+      - button "Toggle navigation" [ref=e6] [cursor=pointer]: Menu ≡
+  - generic [ref=e10]:
+    - heading "Let's talk design" [level=2] [ref=e11]
+    - paragraph [ref=e12]: I'm always looking to expand my experience in design. Message me, or ask me in person. You can meet me at various digital design related events around Prague.
+    - paragraph [ref=e13]:
+      - text: After a corporate stint I'm working at
+      - link "the Czech National Library of Technology" [ref=e14] [cursor=pointer]:
+        - /url: https://www.techlib.cz/en/
+      - text: and at the
+      - link "Charles University" [ref=e15] [cursor=pointer]:
+        - /url: https://cuni.cz/UKEN-10.html
+      - text: ", building design systems teams. Every autumn I also"
+      - link "teach a course" [ref=e16] [cursor=pointer]:
+        - /url: https://insis.vse.cz/katalog/syllabus.pl?predmet=160948;zpet=%2Fkatalog%2Findex.pl%3Fobdobi%3D301%2Cjak%3Ddle_jmena;jazyk=3;lang=cz
+      - text: at University of Economics in Prague. When time allows, I help various pro–bono organizations. Wanna talk about that? Let's grab a coffee!
+    - list [ref=e17]:
+      - listitem [ref=e18]:
+        - button "📧 dugovicjan@gmail.com" [ref=e20] [cursor=pointer]
+      - listitem [ref=e21]:
+        - link "🤙 (+420)777 663 976" [ref=e22] [cursor=pointer]:
+          - /url: tel:+420777663976
+      - listitem [ref=e23]:
+        - link "📱 WhatsApp" [ref=e24] [cursor=pointer]:
+          - /url: https://wa.me/420777663976
+      - listitem [ref=e25]:
+        - link "💬 Messenger" [ref=e26] [cursor=pointer]:
+          - /url: https://m.me/jandugovic
+  - generic [ref=e27]:
+    - 'heading "Check out slides from my talk UX Monday: Adopce Design systemů" [level=4] [ref=e28]':
+      - text: Check out slides from my talk
+      - generic [ref=e29]: "UX Monday: Adopce Design systemů"
+    - paragraph [ref=e30]:
+      - text: In Czech, sorry.
+      - link "Hear me talk on YouTube" [ref=e31] [cursor=pointer]:
+        - /url: https://youtu.be/1SnB9SWtibU?si=SmMCvkD2Q5qSRiKT
+    - iframe [active] [ref=e33]:
+      - generic [active]:
+        - generic [ref=f1e1]:
+          - generic [ref=f1e2]: a
+          - generic [ref=f1e3]: a
+          - generic [ref=f1e4]: a
+          - generic [ref=f1e5]: a
+          - generic [ref=f1e6]: a
+          - generic [ref=f1e7]: a
+          - generic [ref=f1e8]: a
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic [ref=f1e9]:
+                  - generic [ref=f1e11]:
+                    - generic [ref=f1e12]:
+                      - generic [ref=f1e13]:
+                        - main:
+                          - paragraph [ref=f1e14]: Screenreader support is currently disabled. To enable it, use the Accessibility settings from the Options menu.
+                      - button [ref=f1e19]:
+                        - img
+                      - generic [ref=f1e21]:
+                        - generic [ref=f1e22]:
+                          - button "Previous frame" [disabled] [ref=f1e23]:
+                            - generic:
+                              - generic:
+                                - img
+                          - button "Next frame" [disabled] [ref=f1e24]:
+                            - generic:
+                              - generic:
+                                - img
+                        - button "Restart" [ref=f1e26]:
+                          - generic:
+                            - img
+                    - generic [ref=f1e27]: Give feedback, ask a question, or just leave a note of appreciation. Click anywhere in the file to leave a comment.
+                  - generic [ref=f1e28]:
+                    - generic [ref=f1e29]:
+                      - button "Open in Figma" [ref=f1e30]:
+                        - generic:
+                          - img
+                      - link "AUX 4.3.'24" [ref=f1e32] [cursor=pointer]:
+                        - /url: https://www.figma.com/proto/A0UDXBi696JZCBiJg0v2FR?content-scaling=fixed&kind=proto&node-id=12-371&page-id=0:1&scaling=contain&t=DaZemJqxTpkRE3sU-1&viewport=277,384,0.09
+                        - generic [ref=f1e33] [cursor=pointer]: AUX 4.3.'24
+                    - generic [ref=f1e36]:
+                      - text: Edited
+                      - generic [ref=f1e37]: 1 year ago
+                - group [ref=f1e39]:
+                  - status [ref=f1e41]
+                  - status [ref=f1e43]
+  - generic [ref=e37]:
+    - heading "About Ján Dugovič" [level=2] [ref=e38]
+    - paragraph [ref=e40]: JD is a Product Designer, based in Prague, focused on shaping meaningful experiences through design. Specializing in Design Systems in recent years, he empowers product teams to deliver sophisticated and consistent mobile and web apps, ensuring a native-like user experience.
+    - list [ref=e41]:
+      - listitem [ref=e42]:
+        - link "📄 Curriculum Vitæ" [ref=e43] [cursor=pointer]:
+          - /url: CV Ján Dugovič 2024.pdf
+      - listitem [ref=e44]:
+        - link "👨‍💼 LinkedIn" [ref=e45] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/dugi/
+    - generic [ref=e46]:
+      - figure [ref=e48]:
+        - img "at work"
+      - figure [ref=e49]:
+        - img "at play" [ref=e50] [cursor=pointer]
+      - figure [ref=e51]:
+        - img "meeting people" [ref=e52] [cursor=pointer]
+      - figure [ref=e53]:
+        - img [ref=e54] [cursor=pointer]
+  - generic [ref=e55]:
+    - heading "Work" [level=1] [ref=e56]
+    - 'link "Golem Design System Major DS to support a bank''s new services offering. Inside: target, my role, artifacts. 💠" [ref=e57] [cursor=pointer]':
+      - /url: project1.html
+      - heading "Golem Design System" [level=1] [ref=e58] [cursor=pointer]
+      - paragraph [ref=e59] [cursor=pointer]: "Major DS to support a bank's new services offering. Inside: target, my role, artifacts."
+      - generic [ref=e60] [cursor=pointer]: 💠
+    - 'link "Začni učit! Complex web app for edu NGO. Inside: target, my role, artifacts. 🧑🏼‍🏫" [ref=e61] [cursor=pointer]':
+      - /url: project2.html
+      - heading "Začni učit!" [level=1] [ref=e62] [cursor=pointer]
+      - paragraph [ref=e63] [cursor=pointer]: "Complex web app for edu NGO. Inside: target, my role, artifacts."
+      - generic [ref=e64] [cursor=pointer]: 🧑🏼‍🏫
+    - 'link "HeO erp sw redesign. Inside: problem, barriers, process, result. 🗃️" [ref=e65] [cursor=pointer]':
+      - /url: project3.html
+      - heading "HeO" [level=1] [ref=e66] [cursor=pointer]
+      - paragraph [ref=e67] [cursor=pointer]:
+        - generic [ref=e68] [cursor=pointer]: erp sw
+        - text: "redesign. Inside: problem, barriers, process, result."
+      - generic [ref=e69] [cursor=pointer]: 🗃️
+  - contentinfo [ref=e70]:
+    - paragraph [ref=e72]:
+      - text: © Ján Dugovič
+      - generic [ref=e73]: "2025"
+      - link "Fork me on GitHub 🐙🐈" [ref=e74] [cursor=pointer]:
+        - /url: https://github.com/demoklion/jandu
+```
