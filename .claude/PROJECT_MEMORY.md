@@ -1,6 +1,17 @@
 # Portfolio Project Memory
 **Last Updated**: 2025-08-20  
-**Current Status**: Technical modernization complete, CSS reduction phase ready to begin
+**Current Status**: Visual regression testing setup complete, CSS reduction phase ready to begin
+
+## 📋 Memory Files Index
+- **PROJECT_MEMORY.md** - This file: Complete project overview and status
+- **VISUAL_REGRESSION_SETUP.md** - Playwright testing configuration and workflow
+- **AGENT_RECOMMENDATIONS.md** - Specialized agent roles for CSS migration
+- **BOOTSTRAP_AUDIT.md** - Complete Bootstrap usage analysis
+- **GRID_SYSTEM_ANALYSIS.md** - CSS Grid migration strategy
+- **COMPONENTS_CATALOG.md** - Button and navigation component analysis
+- **CLAUDE.md** - Project overview and MCP configuration
+- **WEB_COMPONENTS_SPEC.md** - EmailClipboard and CurrentYear documentation
+- **CLOUDINARY_INFO.md** - Image CDN configuration
 
 ## Project Overview
 Ján Dugovič's personal portfolio website - technical modernization for 30-year longevity while preserving brutally clean design.
