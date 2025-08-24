@@ -45,7 +45,7 @@
   <meta property="og:image:width"
         content="639">
   <meta property="og:description"
-        content="Hey! I'm a product designer working in fintech. Let's go for a coffe maybe?">
+        content="Hey! I'm a product designer working in fintech. Let's go for a coffee maybe?">
   <meta property="og:title"
         content="Ján Dugovič – Product Designer">
   <meta property="og:url"
@@ -355,12 +355,7 @@
 
           </script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-          crossorigin="anonymous"
-          type="text/javascript"
-          defer></script>
+  <!-- Custom ScrollSpy - no dependencies -->
   <script src="js/components.js" defer></script>
 
 
@@ -401,10 +396,31 @@
       // Activate Bootstrap scrollspy on the main nav element
       const mainNav = document.body.querySelector('#mainNav');
       if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-          target: '#mainNav',
-          padding: '10rem 0',
-        });
+        // Custom ScrollSpy implementation
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navbarResponsive .nav-link');
+
+        function updateActiveNavLink() {
+          let currentSection = '';
+
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 200)) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + currentSection) {
+              link.classList.add('active');
+            }
+          });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink(); // Set initial state
       };
 
       // Collapse responsive navbar when toggler is visible
