@@ -23,10 +23,16 @@
 - **Lines removed**: 153 lines
 - **Verified**: No accordion usage in HTML files
 
-### Commit [pending] - Remove all .alert* classes  
+### Commit 92bf914 - Remove all .alert* classes  
 - **Classes removed**: `.alert`, `.alert-heading`, `.alert-link`, `.alert-dismissible`, `.alert-primary`, `.alert-secondary`, `.alert-success`, `.alert-info`, `.alert-warning`, `.alert-danger`, `.alert-light`, `.alert-dark`, `.alert-black`, `.alert-white` and all variants
 - **Lines removed**: 137 lines (5209-5345)
 - **Verified**: No alert usage in any HTML files
 - **File size**: 12,683 lines after removal
 
-## Next Target: .badge* classes
+### Commit [pending] - Remove all .badge* classes
+- **Classes removed**: `.badge`, `.badge:empty`, `.btn .badge` 
+- **Lines removed**: 27 lines (5181-5207)
+- **Verified**: No badge usage in any HTML files
+- **File size**: 12,656 lines after removal
+
+## Next Target: .breadcrumb* classes
