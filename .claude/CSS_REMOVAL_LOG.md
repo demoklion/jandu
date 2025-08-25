@@ -55,7 +55,7 @@
 - **Carousel**: 217 lines removed
 - **Total removed**: 569 lines (from 12,820 → 12,400)
 
-### Commit [pending] - Remove all .modal* classes
+### Commit 061bfac - Remove all .modal* classes
 - **Classes removed**: All modal-related classes including modal-dialog, modal-content, modal-header, modal-body, modal-footer, modal-backdrop and all responsive variants
 - **Lines removed**: 330 lines (5698-6027)
 - **Verified**: No modal usage in any HTML files
@@ -71,4 +71,22 @@
 - **Modal**: 330 lines removed
 - **Total removed**: 899 lines (from 12,820 → 12,070)
 
-## Next Target: .offcanvas* classes
+### Commit [pending] - Remove standalone .offcanvas* classes
+- **Classes removed**: `.offcanvas`, `.offcanvas-xxl/xl/lg/md/sm`, `.offcanvas-start/end/top/bottom`, `.offcanvas-backdrop`, `.offcanvas-header`, `.offcanvas-body`, `.offcanvas-title`
+- **Lines removed**: 642 lines (6082-6723)
+- **Preserved**: navbar-expand offcanvas rules (needed for mobile nav)
+- **Verified**: No offcanvas usage in any HTML files
+- **File size**: 11,428 lines after removal
+- **Visual test**: 7px diff (0.01 ratio - acceptable)
+
+## Progress Summary Update
+- **Accordion**: 153 lines removed
+- **Alert**: 137 lines removed  
+- **Badge**: 27 lines removed
+- **Breadcrumb**: 35 lines removed
+- **Carousel**: 217 lines removed  
+- **Modal**: 330 lines removed
+- **Offcanvas**: 642 lines removed
+- **Total removed**: 1,541 lines (from 12,820 → 11,428)
+
+## Next Target: .toast* classes
