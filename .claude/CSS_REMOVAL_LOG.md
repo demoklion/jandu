@@ -71,7 +71,7 @@
 - **Modal**: 330 lines removed
 - **Total removed**: 899 lines (from 12,820 → 12,070)
 
-### Commit [pending] - Remove standalone .offcanvas* classes
+### Commit ee60fa9 - Remove standalone .offcanvas* classes
 - **Classes removed**: `.offcanvas`, `.offcanvas-xxl/xl/lg/md/sm`, `.offcanvas-start/end/top/bottom`, `.offcanvas-backdrop`, `.offcanvas-header`, `.offcanvas-body`, `.offcanvas-title`
 - **Lines removed**: 642 lines (6082-6723)
 - **Preserved**: navbar-expand offcanvas rules (needed for mobile nav)
@@ -89,4 +89,22 @@
 - **Offcanvas**: 642 lines removed
 - **Total removed**: 1,541 lines (from 12,820 → 11,428)
 
-## Next Target: .toast* classes
+### Commit [pending] - Remove .progress* classes
+- **Classes removed**: `.progress`, `.progress-bar`, `.progress-bar-striped`, `.progress-bar-animated`
+- **Lines removed**: 49 lines (5154-5202)
+- **Verified**: No progress usage in any HTML files (only text mentions)
+- **File size**: 11,379 lines after removal
+- **Visual test**: 7px diff (0.01 ratio - acceptable)
+
+## Progress Summary Update
+- **Accordion**: 153 lines removed
+- **Alert**: 137 lines removed  
+- **Badge**: 27 lines removed
+- **Breadcrumb**: 35 lines removed
+- **Carousel**: 217 lines removed  
+- **Modal**: 330 lines removed
+- **Offcanvas**: 642 lines removed
+- **Progress**: 49 lines removed
+- **Total removed**: 1,590 lines (from 12,820 → 11,379)
+
+## Next Target: .spinner* classes
