@@ -1,9 +1,10 @@
 # Portfolio Project Memory
-**Last Updated**: 2025-08-20  
-**Current Status**: Visual regression testing setup complete, CSS reduction phase ready to begin
+**Last Updated**: 2025-08-24  
+**Current Status**: Bootstrap JS eliminated, custom ScrollSpy working, CSS reduction ready to continue
 
 ## 📋 Memory Files Index
 - **PROJECT_MEMORY.md** - This file: Complete project overview and status
+- **CSS_REMOVAL_LOG.md** - NEW: Active CSS class removal tracking and commit log
 - **VISUAL_REGRESSION_SETUP.md** - Playwright testing configuration and workflow
 - **AGENT_RECOMMENDATIONS.md** - Specialized agent roles for CSS migration
 - **BOOTSTRAP_AUDIT.md** - Complete Bootstrap usage analysis
@@ -110,8 +111,15 @@ Ján Dugovič's personal portfolio website - technical modernization for 30-year
 **Tool**: Playwright MCP (@playwright/mcp@latest)  
 **Configuration**: 1% difference threshold, desktop + mobile viewports  
 **Coverage**: All 4 pages with baseline screenshots created  
-**Files**: VISUAL_REGRESSION_SETUP.md, AGENT_RECOMMENDATIONS.md  
+**Files**: 
+- `VISUAL_REGRESSION_SETUP.md` - Documentation
+- `playwright.config.js` - Playwright configuration (restored from commit 31579cb)
+- `tests/visual-regression.spec.js` - Main visual regression tests
+- `tests/baseline-screenshots.spec.js` - Baseline generator
+- `tests/baseline/` - Manual baseline images (gitignored)
 **Status**: Ready for incremental CSS migration with automated visual validation
+
+**IMPORTANT**: Test files were accidentally deleted but restored from commit 31579cb. Run `npx playwright test` to execute visual regression tests.
 
 ### Expected Outcomes
 - **Bundle Size**: 150KB+ → <20KB total CSS
