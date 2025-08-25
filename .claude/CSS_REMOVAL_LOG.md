@@ -35,10 +35,24 @@
 - **Verified**: No badge usage in any HTML files
 - **File size**: 12,656 lines after removal
 
-### Commit [pending] - Remove all .breadcrumb* classes
+### Commit 49b3a61 - Remove all .breadcrumb* classes
 - **Classes removed**: `.breadcrumb`, `.breadcrumb-item+.breadcrumb-item`, `.breadcrumb-item+.breadcrumb-item::before`, `.breadcrumb-item.active`
 - **Lines removed**: 35 lines (5042-5076)
 - **Verified**: No breadcrumb usage in any HTML files
 - **File size**: 12,621 lines after removal
 
-## Next Target: .carousel* classes
+### Commit [pending] - Remove all .carousel* classes
+- **Classes removed**: All carousel-related classes including carousel-item, carousel-control, carousel-indicators, carousel-caption, carousel-dark variants
+- **Lines removed**: 217 lines (6342-6558) 
+- **Verified**: No carousel usage in any HTML files
+- **File size**: 12,400 lines after removal
+
+## Progress Summary
+- **Accordion**: 153 lines removed
+- **Alert**: 137 lines removed  
+- **Badge**: 27 lines removed
+- **Breadcrumb**: 35 lines removed
+- **Carousel**: 217 lines removed
+- **Total removed**: 569 lines (from 12,820 → 12,400)
+
+## Next Target: .collapse* classes
