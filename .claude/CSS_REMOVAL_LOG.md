@@ -29,10 +29,16 @@
 - **Verified**: No alert usage in any HTML files
 - **File size**: 12,683 lines after removal
 
-### Commit [pending] - Remove all .badge* classes
+### Commit 5624236 - Remove all .badge* classes
 - **Classes removed**: `.badge`, `.badge:empty`, `.btn .badge` 
 - **Lines removed**: 27 lines (5181-5207)
 - **Verified**: No badge usage in any HTML files
 - **File size**: 12,656 lines after removal
 
-## Next Target: .breadcrumb* classes
+### Commit [pending] - Remove all .breadcrumb* classes
+- **Classes removed**: `.breadcrumb`, `.breadcrumb-item+.breadcrumb-item`, `.breadcrumb-item+.breadcrumb-item::before`, `.breadcrumb-item.active`
+- **Lines removed**: 35 lines (5042-5076)
+- **Verified**: No breadcrumb usage in any HTML files
+- **File size**: 12,621 lines after removal
+
+## Next Target: .carousel* classes
