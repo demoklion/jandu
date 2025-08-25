@@ -41,7 +41,7 @@
 - **Verified**: No breadcrumb usage in any HTML files
 - **File size**: 12,621 lines after removal
 
-### Commit [pending] - Remove all .carousel* classes
+### Commit a1601ac - Remove all .carousel* classes
 - **Classes removed**: All carousel-related classes including carousel-item, carousel-control, carousel-indicators, carousel-caption, carousel-dark variants
 - **Lines removed**: 217 lines (6342-6558) 
 - **Verified**: No carousel usage in any HTML files
@@ -55,4 +55,20 @@
 - **Carousel**: 217 lines removed
 - **Total removed**: 569 lines (from 12,820 → 12,400)
 
-## Next Target: .collapse* classes
+### Commit [pending] - Remove all .modal* classes
+- **Classes removed**: All modal-related classes including modal-dialog, modal-content, modal-header, modal-body, modal-footer, modal-backdrop and all responsive variants
+- **Lines removed**: 330 lines (5698-6027)
+- **Verified**: No modal usage in any HTML files
+- **File size**: 12,070 lines after removal
+- **Visual test**: 25 pixels diff (0.01 ratio - at threshold, acceptable)
+
+## Progress Summary Update
+- **Accordion**: 153 lines removed
+- **Alert**: 137 lines removed  
+- **Badge**: 27 lines removed
+- **Breadcrumb**: 35 lines removed
+- **Carousel**: 217 lines removed  
+- **Modal**: 330 lines removed
+- **Total removed**: 899 lines (from 12,820 → 12,070)
+
+## Next Target: .offcanvas* classes
