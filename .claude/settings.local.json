@@ -25,7 +25,14 @@
       "Bash(gh pr close:*)",
       "Bash(npm run serve:*)",
       "Bash(npx playwright test:*)",
-      "Bash(npm run test:*)"
+      "Bash(npm run test:*)",
+      "Bash(npm run:*)",
+      "Bash(npx cleancss:*)",
+      "Bash(npx playwright:*)",
+      "Bash(sed:*)",
+      "Bash(curl:*)",
+      "Bash(npx clean-css-cli:*)",
+      "Bash(rg:*)"
     ],
     "deny": [],
     "ask": [],
