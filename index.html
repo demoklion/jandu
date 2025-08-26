@@ -188,11 +188,16 @@
       <a href="https://youtu.be/1SnB9SWtibU?si=SmMCvkD2Q5qSRiKT">Hear me talk on YouTube</a>
     </p>
     <div class="iframe-wrapper">
+      <div id="iframe-placeholder" class="iframe-placeholder" style="display: block;">
+        <button class="btn btn-default btn-lg" onclick="loadFigmaEmbed()">
+          Load Figma Slides ~ 3MB
+        </button>
+      </div>
       <iframe id="figmaTalk"
-              style="border: 1px solid rgba(0, 0, 0, 0.1);"
+              style="border: 1px solid rgba(0, 0, 0, 0.1); display: none;"
               width="800"
               height="450"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FA0UDXBi696JZCBiJg0v2FR%2FAUX-4.3.'24%3Fpage-id%3D0%253A1%26node-id%3D12-371%26viewport%3D277%252C384%252C0.09%26t%3DDaZemJqxTpkRE3sU-1%26scaling%3Dcontain%26content-scaling%3Dfixed"
+              data-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FA0UDXBi696JZCBiJg0v2FR%2FAUX-4.3.'24%3Fpage-id%3D0%253A1%26node-id%3D12-371%26viewport%3D277%252C384%252C0.09%26t%3DDaZemJqxTpkRE3sU-1%26scaling%3Dcontain%26content-scaling%3Dfixed"
               allowfullscreen></iframe>
     </div>
   </section>
@@ -352,6 +357,18 @@
             console.log("deferred images js");
 
             function init() { for (var t = document.getElementsByTagName("img"), e = 0; e < t.length; e++)t[e].getAttribute("data-src") && t[e].setAttribute("src", t[e].getAttribute("data-src")) } window.onload = init;
+
+            // Lazy load Figma iframe
+            function loadFigmaEmbed() {
+              const placeholder = document.getElementById('iframe-placeholder');
+              const iframe = document.getElementById('figmaTalk');
+              
+              if (placeholder && iframe) {
+                placeholder.style.display = 'none';
+                iframe.style.display = 'block';
+                iframe.src = iframe.getAttribute('data-src');
+              }
+            }
 
           </script>
 
