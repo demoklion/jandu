@@ -10507,3 +10507,17 @@ footer p {
 .emoji {
   font-size: 5rem;
 }
+
+/* Responsive iframe */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+}
