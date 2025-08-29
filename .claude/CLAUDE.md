@@ -109,10 +109,48 @@ The following MCP servers are configured for this project:
 
 1. Always create feature branches for any changes
 2. Check `git fetch origin` before starting work
-3. Run `npm run minify-css` after CSS edits  
+3. Run `npx clean-css-cli css/styles.css -o css/styles.min.css` after CSS edits  
 4. Create PRs for all changes, no matter how small
 5. Reference `PROJECT_MEMORY.md` for current status and next tasks
 6. Update `STATUS.md` with progress frequently
+
+## CSS Removal Workflow (Phase C)
+
+**Standard Process:**
+1. **Server Management**: Check if HTTP server is running on port 8000
+   - `lsof -i :8000` to check if running
+   - If running: `kill $(lsof -t -i:8000)` to reset
+   - Start fresh: `python3 -m http.server 8000 > /dev/null 2>&1 &`
+
+2. **CSS Modification**: Remove unused Bootstrap classes in sections
+
+3. **Build Process**: `npx clean-css-cli css/styles.css -o css/styles.min.css`
+
+4. **Visual Testing**: `npx playwright test tests/visual-regression.spec.js`
+   - Threshold: 0.01 (1%) difference acceptable
+   - 0.08 ratio considered at threshold but acceptable
+
+5. **Auto-commit on Success**: 
+   - If visual tests pass (differences ≤ 0.01 ratio), automatically commit
+   - Update CSS_REMOVAL_LOG.md with removal details and test results  
+   - Git commit with standardized message format
+
+**Workflow Commands:**
+```bash
+# 1. Server reset
+lsof -i :8000 && kill $(lsof -t -i:8000)
+python3 -m http.server 8000 > /dev/null 2>&1 &
+
+# 2. Build
+npx clean-css-cli css/styles.css -o css/styles.min.css
+
+# 3. Test
+npx playwright test tests/visual-regression.spec.js
+
+# 4. Update log and auto-commit (if tests pass)
+# Update CSS_REMOVAL_LOG.md with test results
+git add . && git commit -m "css: remove [component] - [N] lines removed"
+```
 
 ## Memory Files
 - `.claude/PROJECT_MEMORY.md` - Complete project history and current phase details
