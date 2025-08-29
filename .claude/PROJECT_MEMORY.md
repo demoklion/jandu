@@ -4,7 +4,8 @@
 
 ## 📋 Memory Files Index
 - **PROJECT_MEMORY.md** - This file: Complete project overview and status
-- **CSS_REMOVAL_LOG.md** - NEW: Active CSS class removal tracking and commit log
+- **STATUS.md** - Current work status, updated frequently during sessions
+- **CSS_REMOVAL_LOG.md** - Active CSS class removal tracking and commit log
 - **VISUAL_REGRESSION_SETUP.md** - Playwright testing configuration and workflow
 - **AGENT_RECOMMENDATIONS.md** - Specialized agent roles for CSS migration
 - **BOOTSTRAP_AUDIT.md** - Complete Bootstrap usage analysis
