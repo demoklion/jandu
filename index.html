@@ -45,7 +45,7 @@
   <meta property="og:image:width"
         content="639">
   <meta property="og:description"
-        content="Hey! I'm a product designer working in fintech. Let's go for a coffe maybe?">
+        content="Hey! I'm a product designer working in fintech. Let's go for a coffee maybe?">
   <meta property="og:title"
         content="Ján Dugovič – Product Designer">
   <meta property="og:url"
@@ -53,10 +53,6 @@
   <meta property="og:image"
         content="https://jandu.top/img/og-image.jpg">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-        crossorigin="anonymous">
   <link href="css/styles.min.css"
         rel="stylesheet">
 </head>
@@ -192,11 +188,16 @@
       <a href="https://youtu.be/1SnB9SWtibU?si=SmMCvkD2Q5qSRiKT">Hear me talk on YouTube</a>
     </p>
     <div class="iframe-wrapper">
+      <div id="iframe-placeholder" class="iframe-placeholder" style="display: block;">
+        <button class="btn btn-default btn-lg" onclick="loadFigmaEmbed()">
+          ▷ Load Figma Slides ~ 3MB
+        </button>
+      </div>
       <iframe id="figmaTalk"
-              style="border: 1px solid rgba(0, 0, 0, 0.1);"
+              style="border: 1px solid rgba(0, 0, 0, 0.1); display: none;"
               width="800"
               height="450"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FA0UDXBi696JZCBiJg0v2FR%2FAUX-4.3.'24%3Fpage-id%3D0%253A1%26node-id%3D12-371%26viewport%3D277%252C384%252C0.09%26t%3DDaZemJqxTpkRE3sU-1%26scaling%3Dcontain%26content-scaling%3Dfixed"
+              data-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FA0UDXBi696JZCBiJg0v2FR%2FAUX-4.3.'24%3Fpage-id%3D0%253A1%26node-id%3D12-371%26viewport%3D277%252C384%252C0.09%26t%3DDaZemJqxTpkRE3sU-1%26scaling%3Dcontain%26content-scaling%3Dfixed"
               allowfullscreen></iframe>
     </div>
   </section>
@@ -357,14 +358,21 @@
 
             function init() { for (var t = document.getElementsByTagName("img"), e = 0; e < t.length; e++)t[e].getAttribute("data-src") && t[e].setAttribute("src", t[e].getAttribute("data-src")) } window.onload = init;
 
+            // Lazy load Figma iframe
+            function loadFigmaEmbed() {
+              const placeholder = document.getElementById('iframe-placeholder');
+              const iframe = document.getElementById('figmaTalk');
+
+              if (placeholder && iframe) {
+                placeholder.style.display = 'none';
+                iframe.style.display = 'block';
+                iframe.src = iframe.getAttribute('data-src');
+              }
+            }
+
           </script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-          crossorigin="anonymous"
-          type="text/javascript"
-          defer></script>
+  <!-- Custom ScrollSpy - no dependencies -->
   <script src="js/components.js" defer></script>
 
 
@@ -405,10 +413,31 @@
       // Activate Bootstrap scrollspy on the main nav element
       const mainNav = document.body.querySelector('#mainNav');
       if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-          target: '#mainNav',
-          padding: '10rem 0',
-        });
+        // Custom ScrollSpy implementation
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navbarResponsive .nav-link');
+
+        function updateActiveNavLink() {
+          let currentSection = '';
+
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 200)) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + currentSection) {
+              link.classList.add('active');
+            }
+          });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink(); // Set initial state
       };
 
       // Collapse responsive navbar when toggler is visible

@@ -267,5 +267,39 @@ if (raf) {
 // Initialize lazy loading on page load
 window.addEventListener('load', initImageLazyLoading);
 
+/**
+ * Mobile Navigation Toggle - Replace Bootstrap collapse functionality
+ */
+function initMobileNavigation() {
+  const toggleButton = document.querySelector('.navbar-toggler');
+  const navCollapse = document.querySelector('.navbar-collapse');
+  
+  if (!toggleButton || !navCollapse) return;
+  
+  toggleButton.addEventListener('click', () => {
+    const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+    
+    if (isExpanded) {
+      navCollapse.classList.remove('show');
+      toggleButton.setAttribute('aria-expanded', 'false');
+    } else {
+      navCollapse.classList.add('show');
+      toggleButton.setAttribute('aria-expanded', 'true');
+    }
+  });
+  
+  // Close menu when clicking nav links
+  const navLinks = navCollapse.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navCollapse.classList.remove('show');
+      toggleButton.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// Initialize mobile navigation
+document.addEventListener('DOMContentLoaded', initMobileNavigation);
+
 // Initialize image fullscreen functionality
 initImageFullscreen();
