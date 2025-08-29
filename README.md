@@ -31,4 +31,8 @@ This runs on GitHub Pages. It was forked from a free template based on Bootstrap
 
 ## Copyright and License
 
-Copyright 2023 Ján Dugovič, based on a template adapted from Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+Copyright 2025 Ján Dugovič, based on a template adapted from Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+
+### Development Credits
+
+Technical modernization and optimization completed with [Claude Code](https://claude.ai/code) - AI-powered development assistant by Anthropic.
