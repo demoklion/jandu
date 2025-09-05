@@ -389,6 +389,8 @@
     // Scripts
     //
 
+    console.log('TEST: JavaScript is executing');
+
     // Define ScrollSpy function globally
     function initScrollSpy() {
         var mainNav = document.getElementById('mainNav');
@@ -474,6 +476,7 @@
     }
 
     window.addEventListener('DOMContentLoaded', event => {
+      console.log('TEST: DOMContentLoaded fired');
       // Navbar shrink function
       const navbarShrink = () => {
         const navbarCollapsible = document.body.querySelector('#mainNav');
