@@ -394,27 +394,8 @@
     window.addEventListener('DOMContentLoaded', event => {
       console.log('TEST: DOMContentLoaded fired');
 
-      // Navbar shrink function
-      const navbarShrink = () => {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-          return;
-        }
-        if (window.scrollY === 0) {
-          navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-          navbarCollapsible.classList.add('navbar-shrink')
-        }
-      };
-
-      // Shrink the navbar
-      navbarShrink();
-
-      // Shrink the navbar when page is scrolled
-      document.addEventListener('scroll', navbarShrink);
-
-      // Activate Bootstrap scrollspy on the main nav element
-      function initScrollSpy() {
+    // Define ScrollSpy function globally
+    function initScrollSpy() {
         var mainNav = document.getElementById('mainNav');
         if (!mainNav) {
           console.error('ScrollSpy: mainNav element not found');
@@ -486,16 +467,36 @@
         }
       }
 
-      // Initialize after DOM and assets are loaded
-      if (document.readyState === 'complete') {
-        initScrollSpy();
-      } else {
-        if (window.addEventListener) {
-          window.addEventListener('load', initScrollSpy, false);
-        } else if (window.attachEvent) {
-          window.attachEvent('onload', initScrollSpy);
-        }
+    // Initialize ScrollSpy when page loads
+    if (document.readyState === 'complete') {
+      initScrollSpy();
+    } else {
+      if (window.addEventListener) {
+        window.addEventListener('load', initScrollSpy, false);
+      } else if (window.attachEvent) {
+        window.attachEvent('onload', initScrollSpy);
       }
+    }
+
+    window.addEventListener('DOMContentLoaded', event => {
+      // Navbar shrink function
+      const navbarShrink = () => {
+        const navbarCollapsible = document.body.querySelector('#mainNav');
+        if (!navbarCollapsible) {
+          return;
+        }
+        if (window.scrollY === 0) {
+          navbarCollapsible.classList.remove('navbar-shrink')
+        } else {
+          navbarCollapsible.classList.add('navbar-shrink')
+        }
+      };
+
+      // Shrink the navbar
+      navbarShrink();
+
+      // Shrink the navbar when page is scrolled
+      document.addEventListener('scroll', navbarShrink);
 
       // Collapse responsive navbar when toggler is visible
       const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -509,7 +510,6 @@
           }
         });
       });
-
     });
 
   </script>
