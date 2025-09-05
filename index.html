@@ -411,34 +411,88 @@
       document.addEventListener('scroll', navbarShrink);
 
       // Activate Bootstrap scrollspy on the main nav element
-      const mainNav = document.body.querySelector('#mainNav');
-      if (mainNav) {
-        // Custom ScrollSpy implementation
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('#navbarResponsive .nav-link');
-
-        function updateActiveNavLink() {
-          let currentSection = '';
-
-          sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= (sectionTop - 200)) {
-              currentSection = section.getAttribute('id');
-            }
-          });
-
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentSection) {
-              link.classList.add('active');
-            }
-          });
+      function initScrollSpy() {
+        var mainNav = document.getElementById('mainNav');
+        if (!mainNav) {
+          console.error('ScrollSpy: mainNav element not found');
+          return;
         }
 
-        window.addEventListener('scroll', updateActiveNavLink);
-        updateActiveNavLink(); // Set initial state
-      };
+        try {
+          // Use more compatible element selection
+          var sections = document.querySelectorAll('section[id]');
+          var navContainer = document.getElementById('navbarResponsive');
+          var navLinks = navContainer ? navContainer.querySelectorAll('.nav-link') : [];
+          
+          if (sections.length === 0 || navLinks.length === 0) {
+            console.error('ScrollSpy: No sections or nav links found');
+            return;
+          }
+
+          console.log('ScrollSpy Debug - Sections:', sections.length, 'NavLinks:', navLinks.length);
+
+          function updateActiveNavLink() {
+            var currentSection = '';
+            var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Convert NodeList to Array for better compatibility
+            for (var i = 0; i < sections.length; i++) {
+              var section = sections[i];
+              var sectionTop = section.offsetTop;
+              if (scrollPos >= (sectionTop - 200)) {
+                currentSection = section.getAttribute('id');
+              }
+            }
+
+            // Update nav links
+            for (var j = 0; j < navLinks.length; j++) {
+              var link = navLinks[j];
+              var href = link.getAttribute('href');
+              
+              if (link.classList) {
+                link.classList.remove('active');
+              } else {
+                // Fallback for older browsers
+                link.className = link.className.replace(/\bactive\b/g, '');
+              }
+              
+              if (href === '#' + currentSection) {
+                if (link.classList) {
+                  link.classList.add('active');
+                } else {
+                  link.className += ' active';
+                }
+                console.log('ScrollSpy: Activated section', currentSection);
+              }
+            }
+          }
+
+          // Add event listener
+          if (window.addEventListener) {
+            window.addEventListener('scroll', updateActiveNavLink, false);
+          } else if (window.attachEvent) {
+            window.attachEvent('onscroll', updateActiveNavLink);
+          }
+          
+          // Initial call
+          updateActiveNavLink();
+          console.log('ScrollSpy: Initialized successfully');
+          
+        } catch (error) {
+          console.error('ScrollSpy initialization error:', error);
+        }
+      }
+
+      // Initialize after DOM and assets are loaded
+      if (document.readyState === 'complete') {
+        initScrollSpy();
+      } else {
+        if (window.addEventListener) {
+          window.addEventListener('load', initScrollSpy, false);
+        } else if (window.attachEvent) {
+          window.attachEvent('onload', initScrollSpy);
+        }
+      }
 
       // Collapse responsive navbar when toggler is visible
       const navbarToggler = document.body.querySelector('.navbar-toggler');
