@@ -4,10 +4,10 @@
 ## 🔴 CURRENT OPEN ISSUES
 
 ### Our Repository (demoklion/jandu)
-- **#235** - Verify typography - no negative letter-spacing
-- **#234** - Verify ScrollSpy responsive functionality  
-- **#233** - Verify mobile margins - content-offset-nav padding
-- **#232** - Verify h-card microformats implementation
+- **#232** ✅ Verify h-card microformats implementation (MERGED - PR #236)
+- **#233** ✅ Verify mobile margins - content-offset-nav padding (CLOSED - verified)
+- **#234** ✅ Verify ScrollSpy responsive functionality (CLOSED - already implemented)  
+- **#235** ✅ Verify typography - no negative letter-spacing (CLOSED - verified)
 - **#223** - Missing CSS classes in use (2023)
 - **#222** - Horizontal rules not shown in projects section (2023)
 - **#216** - nav-item dropdown not working on mobile devices (2022)

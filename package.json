@@ -25,6 +25,12 @@
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   },
+  "scripts": {
+    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
+    "check-analytics": "node scripts/check-analytics.js",
+    "build": "npm run minify-css && npm run check-analytics",
+    "serve": "python3 -m http.server 8000"
+  },
   "dependencies": {
     "bootstrap": "5.2.3"
   },
