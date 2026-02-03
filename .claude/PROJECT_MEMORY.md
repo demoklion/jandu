@@ -1,6 +1,6 @@
 # Portfolio Project Memory
-**Last Updated**: 2025-08-24  
-**Current Status**: Bootstrap JS eliminated, custom ScrollSpy working, CSS reduction ready to continue
+**Last Updated**: 2026-02-03
+**Current Status**: CSS audit complete, Bootstrap migration nearly done, portfolio content branch pending
 
 ## 📋 Memory Files Index
 - **PROJECT_MEMORY.md** - This file: Complete project overview and status
@@ -103,11 +103,10 @@ Ján Dugovič's personal portfolio website - technical modernization for 30-year
 - **#63**: H-card microformats implementation (needs verification)
 - **#53**: Typography improvements (needs verification)
 
-### 📋 Remaining Issues  
-- **#35**: Replace Bootstrap with CSS Grid (CSS reduction phase)
-- **#209**: Privacy-focused analytics implementation
-- **#40**: Phone click behavior investigation
-- **#29**: Project learnings content (user task)
+### 📋 Remaining Issues
+- **#241**: ~~Audit and fix CSS duplications~~ → **Closed by PR #246** (2026-02-03)
+- **#237**: Set up website analytics (Cloudflare Web Analytics — needs dashboard access)
+- **#29**: Project learnings content (user task — needs personal input)
 
 ## 🔧 Build System
 
@@ -172,11 +171,10 @@ npm run minify-css  # Build CSS after changes
 ```
 
 ## 🎯 Next Immediate Tasks
-1. ✅ **Complete Bootstrap usage audit** - Phase A finished
-2. **Begin Phase B**: Custom CSS Grid implementation
-3. **Begin Phase B**: Custom button system implementation  
-4. **Begin Phase B**: Custom navigation system
-5. Set up enhanced build process with CSS optimization
+1. ✅ **CSS Audit** — PR #246 merged: removed 34 unused variables, consolidated duplicates, fixed LESS bug
+2. **Review & merge** `claude/portfolio-content-addition-VsMlK` — 3 new project pages (rebased on master)
+3. **Set up Cloudflare Web Analytics** (#237) — needs dashboard access
+4. **Add project learnings content** (#29) — needs personal input
 
 ## 📝 Key Learnings
 - **Security First**: Always validate URLs before DOM manipulation
