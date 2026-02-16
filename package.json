@@ -1,51 +1,18 @@
 {
-  "title": "Grayscale",
-  "name": "startbootstrap-grayscale",
-  "version": "4.1.1",
-  "description": "A grayscale one page HTML theme for Bootstrap.",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template-overviews/grayscale",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale/issues",
-    "email": "feedback@startbootstrap.com"
-  },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
+  "name": "jandu-portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio site for Ján Dugovič",
+  "license": "CC-BY-NC-SA-4.0",
+  "author": "Ján Dugovič",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+    "url": "https://github.com/demoklion/jandu.git"
   },
   "scripts": {
-    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
-    "check-analytics": "node scripts/check-analytics.js",
-    "build": "npm run minify-css && npm run check-analytics",
+    "minify-css": "npx clean-css-cli -o css/styles.min.css css/styles.css",
     "serve": "python3 -m http.server 8000"
   },
-  "dependencies": {
-    "bootstrap": "5.2.3"
-  },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "browser-sync": "^2.29.3",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-standard": "^4.1.0",
-    "prettier": "^3.0.3",
-    "purgecss": "^7.0.2",
-    "shelljs": "^0.8.5",
-    "upath": "^2.0.1"
+    "prettier": "^3.0.3"
   }
 }
