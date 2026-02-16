@@ -216,9 +216,28 @@ function initImageFullscreen() {
   });
 }
 
+/**
+ * Site Footer Web Component - Renders compact footer with copyright, license, and webarchiv badge
+ * @extends HTMLElement
+ */
+class SiteFooter extends HTMLElement {
+  connectedCallback() {
+    const year = new Date().getFullYear();
+    this.innerHTML = `
+  <footer>
+    <div class="container footer-row">
+      <p>&copy; J&aacute;n Dugovi&ccaron; ${year} &middot; <a href="https://github.com/demoklion/jandu" target="_blank">GitHub &#x1f419;&#x1f408;</a></p>
+      <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" class="cc-icon"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" class="cc-icon"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" class="cc-icon"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" class="cc-icon"></p>
+      <div class="webarchiv-badge"><p><a href="http://www.webarchiv.cz/en/disclaimer"><span style="text-decoration: underline;">Webarchiv</span>ed<br>by National Library<br>of the Czech Republic</a></p></div>
+    </div>
+  </footer>`;
+  }
+}
+
 // Register web components
 customElements.define('current-year', CurrentYear);
 customElements.define('email-clipboard', EmailClipboard);
+customElements.define('site-footer', SiteFooter);
 
 /**
  * Load deferred styles from template element
