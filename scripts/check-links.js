@@ -87,8 +87,14 @@ const sitemapPath = path.join(ROOT, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
   const xml = fs.readFileSync(sitemapPath, 'utf8');
   for (const loc of extractSitemapLocs(xml)) {
-    if (!loc.startsWith(SITE_ORIGIN)) continue; // skip non-site URLs
-    let p = loc.slice(SITE_ORIGIN.length) || '/';
+    let parsed;
+    try {
+      parsed = new URL(loc);
+    } catch (_) {
+      continue; // not an absolute URL — skip
+    }
+    if (parsed.origin !== SITE_ORIGIN) continue; // only validate on-site URLs (exact origin match)
+    let p = parsed.pathname || '/';
     if (p.endsWith('/')) p += 'index.html';
     const abs = path.join(ROOT, decodeURIComponent(p));
     checked++;
