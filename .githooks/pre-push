@@ -1,0 +1,8 @@
+#!/bin/sh
+# Blocks a push if any local link points at a missing file.
+# Enabled via `git config core.hooksPath .githooks` (auto-set by `npm install`'s prepare script).
+echo "→ pre-push: checking local links exist…"
+npm run --silent check-links || {
+  echo "✗ pre-push blocked: fix the broken links above (or run 'git push --no-verify' to override)."
+  exit 1
+}
