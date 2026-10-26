@@ -4,6 +4,7 @@
  * that does not exist in the repo. Catches the classic "renamed a file, forgot
  * a reference" 404 (e.g. the CV PDF, css/custom.css, img/og-image.jpg).
  *
+ * Also fails on resources loaded over http:// (mixed content on the https site).
  * Scans every root-level *.html plus sitemap.xml. No dependencies.
  * Run with `npm run check-links` (also runs automatically on `git push`).
  */
@@ -80,6 +81,30 @@ for (const file of htmlFiles) {
       problems.push({ file: path.relative(ROOT, file), link: raw, target: path.relative(ROOT, abs) });
     }
   }
+}
+
+// Mixed content: anything the page *loads* (images, scripts, styles, media) must be https on an https site.
+// Plain <a href="http://..."> navigation is fine and is not checked.
+const insecure = [];
+const insecureRes = [
+  /(?<![-\w])(?:src|data-src|srcset|data-srcset|poster)\s*=\s*["']\s*(http:\/\/[^"'\s]*)/gi,
+  /<link\b[^>]*\bhref\s*=\s*["']\s*(http:\/\/[^"'\s]*)/gi,
+  /url\(\s*["']?(http:\/\/[^"')\s]*)/gi,
+];
+for (const file of htmlFiles) {
+  const html = fs.readFileSync(file, 'utf8');
+  for (const re of insecureRes) {
+    let m;
+    while ((m = re.exec(html)) !== null) {
+      const line = html.slice(0, m.index).split('\n').length;
+      insecure.push(`${path.relative(ROOT, file)}:${line}: ${m[1]}`);
+    }
+  }
+}
+if (insecure.length) {
+  console.error(`\n✗ Resources loaded over http:// (mixed content, ${insecure.length}) — use https://:\n`);
+  for (const i of insecure) console.error(`  ${i}`);
+  process.exit(1);
 }
 
 // Validate sitemap.xml <loc> entries map to existing local files.
