@@ -1,5 +1,5 @@
 # Portfolio Development Status
-**Last Updated**: 2026-02-03
+**Last Updated**: 2026-11-12
 **Current Branch**: `master`
 **Active Phase**: Maintenance & content additions
 
@@ -14,7 +14,7 @@
 **Task**: Portfolio content review
 **Progress**: Awaiting review of `claude/portfolio-content-addition-VsMlK` (3 new project pages)
 **Blockers**: None
-**Next**: Merge portfolio branch, then tackle analytics (#237)
+**Next**: AI-first redo of Generali + NTK case studies, see `.claude/AI_FIRST_CASE_STUDIES.md`
 
 ## 📊 Project Status Overview
 
