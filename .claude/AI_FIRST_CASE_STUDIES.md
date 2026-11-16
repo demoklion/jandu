@@ -13,6 +13,11 @@ Created 2026-11-12. Source drafts: `project5.html` (NTK) and `project6.html` (Ge
 - No invented metrics. Only numbers Ján can defend (counts of components, platforms, teams, institutions, or real measurements).
 - Questions go to Ján as short Q&A rounds with answer options, not long text.
 
+### Added 2026-11-16
+- Index shows the 3 best projects (Generali → NTK → Golem); Charles Uni, Začni učit!, HeO move to an Archive list. Nothing deleted.
+- Images: Ján adds them himself. Pages carry visible red `data-todo` slots; `scripts/check-todos.js` + `.github/workflows/check-todos.yml` fail the PR until every slot is done. Do not merge with an open TODO.
+- NTK reframe: the real achievement is **preparing the tender and herding stakeholders through it**, plus design promotion work. Little hands-on design. Lead with the tender story, not DS craft.
+
 ## TODO
 
 ### 0. Before writing
@@ -31,7 +36,9 @@ Created 2026-11-12. Source drafts: `project5.html` (NTK) and `project6.html` (Ge
 - [ ] Page `<title>`: "Generali … | Ján Dugovič"; fix meta description
 
 ### 2. NTK: rewrite AI-first
-- [ ] Reframe: library discovery when students go to Google/ChatGPT first (from NTK×VŠE research)
+- [ ] **Lead with the tender**: preparing it and herding stakeholders through it (Ján's strongest NTK achievement). Q&A: what the tender bought, who had to agree, what Ján wrote/defined (requirements, design/accessibility criteria, evaluation), outcome
+- [ ] Design promotion work inside NTK (what, for whom)
+- [ ] Reframe: library discovery when students go to Google/ChatGPT first (from NTK×VŠE research), only if it supports the tender story
 - [ ] Core idea from the "Vizualni styl – vodovky" doc: white-label core → NTK theme → second institution as proof. "Core must be rational. NTK theme can have a soul."
 - [ ] Priority ladder: usability → accessibility → functionality → consistency → implementability → brand expression
 - [ ] Building the research capability (VŠE student collaboration; credit teams if quoted)
