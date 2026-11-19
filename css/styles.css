@@ -1095,6 +1095,7 @@ footer p {
   color: #f2f3f4;
   font-weight: 600;
   margin-right: 0.25rem;
+  text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
