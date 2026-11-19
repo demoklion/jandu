@@ -880,7 +880,7 @@ a:hover {
     transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
     letter-spacing: 1px;
     border-bottom: none;
-    background: transparent;
+    background: #131516;
   }
 
   #mainNav.navbar-shrink {
