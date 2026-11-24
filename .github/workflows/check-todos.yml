@@ -1,0 +1,18 @@
+name: Check open TODOs
+
+# Fails a PR while any page still has an open TODO slot (missing image, caption,
+# or copy). Make "todos" a required status check so the PR cannot merge.
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  todos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/check-todos.js
+      - run: node scripts/check-links.js
