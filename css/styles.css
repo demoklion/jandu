@@ -1075,6 +1075,7 @@ footer p {
 /* Work archive: older projects as a compact list under the top 3 */
 .work-archive {
   margin-top: 2rem;
+  text-align: left;
 }
 
 .work-archive h2 {
